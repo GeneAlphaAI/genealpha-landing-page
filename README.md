@@ -1,1 +1,1 @@
-# genealpha-landing-page
+# GeneAlpha Landing Page
