@@ -3,6 +3,7 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import NavBar from "./components/navigation/NavBar";
 import Hero from "./components/hero/Hero";
+import Ecosystem from "./components/ecosystem/Ecosystem";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -11,6 +12,7 @@ function App() {
     <div className="font-inter bg-primary text-white min-h-screen">
       <NavBar />
       <Hero />
+      <Ecosystem />
     </div>
   );
 }

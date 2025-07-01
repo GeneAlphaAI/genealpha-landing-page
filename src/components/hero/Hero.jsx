@@ -3,8 +3,8 @@ import PrimaryButton from "../buttons/PrimaryButton";
 
 const Hero = () => {
   return (
-    <div className="w-full flex flex-col justify-center items-center">
-      <div className="w-full max-w-screen-xl mt-10 space-y-4">
+    <div className="w-full flex flex-col relative h-[130dvh] overflow-hidden items-center">
+      <div className="w-full max-w-screen-xl mt-10 space-y-4 z-[2]">
         <h1 className="text-lg text-primary-text font-semibold text-left leading-[120%] max-w-[28ch]">
           <span className="whitespace-nowrap">
             Gene
@@ -18,7 +18,7 @@ const Hero = () => {
           is building the first Web3 prediction model that evolves itself using
           Genetic Algorithms
         </h1>
-        <p className="text-secondary-text text-md max-w-[60ch]">
+        <p className="text-secondary-text text-md max-w-[55ch]">
           Model Zoo based prediction system using more than 15 baseline models
           to breed the strongest prediction model to date using Genetic
           Algorithms.
@@ -38,10 +38,11 @@ const Hero = () => {
         </div>
       </div>
       <img
-        src="/assets/hero/DApp.png"
+        src="/assets/hero/DAppSkew.webp"
         alt="Right Arrow - Docs"
-        className="-my-[140px] -mr-[20px]"
+        className=" top-70 right-0 left-40 bottom-0 absolute scale-110 z-[1]"
       />
+      <div className="absolute bottom-0 left-0 right-0 h-100 z-[3]  pointer-events-none bg-gradient-to-t from-primary to-transparent"></div>
     </div>
   );
 };

@@ -11,7 +11,8 @@ body {
   --breakpoint-3xl: 120rem;
   --rounded-sm: 5px;
   --text-lg: 42px;
-  --text-sm: 22px;
+  --text-md: 22px;
+  --text-sm: 14px;
   --color-primary: #0a0a0b;
   --color-primary-text: #f9f9f9;
   --color-secondary-text: #c0c0c0;

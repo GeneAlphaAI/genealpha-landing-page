@@ -33,7 +33,7 @@ const PrimaryButton = ({
         </div>
       ) : (
         <div
-          className={`sm:text-md ${textClassName} ${
+          className={`sm:text-sm ${textClassName} ${
             loading ? "opacity-70" : ""
           }`}
         >
