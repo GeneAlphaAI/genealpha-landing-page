@@ -40,9 +40,10 @@ const Hero = () => {
       <img
         src="/assets/hero/DAppSkew.webp"
         alt="Right Arrow - Docs"
-        className=" top-70 right-0 left-40 bottom-0 absolute scale-110 z-[1]"
+        className=" top-70 right-0 left-60 bottom-0 absolute scale-110 z-[1]"
       />
       <div className="absolute bottom-0 left-0 right-0 h-100 z-[3]  pointer-events-none bg-gradient-to-t from-primary to-transparent"></div>
+      <div className="absolute top-0 right-0 h-full w-150 z-[3] pointer-events-none bg-gradient-to-l from-primary to-transparent"></div>
     </div>
   );
 };
