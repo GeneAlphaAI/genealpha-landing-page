@@ -5,6 +5,7 @@ const PrimaryButton = ({
   onClick,
   className = "",
   textClassName = "font-regular 3xl:text-[0.9dvw] text-primary",
+  textSize = "sm:text-sm",
   mobilePadding = "px-3 py-1",
   defaultPadding = "px-5 py-1",
   roundedStyle = "rounded-sm",
@@ -33,7 +34,7 @@ const PrimaryButton = ({
         </div>
       ) : (
         <div
-          className={`sm:text-sm ${textClassName} ${
+          className={`${textSize} ${textClassName} ${
             loading ? "opacity-70" : ""
           }`}
         >

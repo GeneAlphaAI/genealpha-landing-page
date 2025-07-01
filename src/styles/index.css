@@ -10,12 +10,15 @@ body {
   --font-inter: "Inter", sans-serif;
   --breakpoint-3xl: 120rem;
   --rounded-sm: 5px;
-  --text-lg: 42px;
+  --text-xl: 42px;
+  --text-lg: 36px;
   --text-md: 22px;
   --text-sm: 14px;
+  --text-xs: 12px;
   --color-primary: #0a0a0b;
   --color-primary-text: #f9f9f9;
   --color-secondary-text: #c0c0c0;
+  --color-stroke-gray: #242424;
   --color-inactive-text: #97979c;
 }
 

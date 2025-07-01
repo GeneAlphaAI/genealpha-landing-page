@@ -4,8 +4,8 @@ import PrimaryButton from "../buttons/PrimaryButton";
 const Hero = () => {
   return (
     <div className="w-full flex flex-col relative h-[130dvh] overflow-hidden items-center">
-      <div className="w-full max-w-screen-xl mt-10 space-y-4 z-[2]">
-        <h1 className="text-lg text-primary-text font-semibold text-left leading-[120%] max-w-[28ch]">
+      <div className="w-full max-w-6xl mt-10 space-y-[25px] z-[2]">
+        <h1 className="text-xl text-primary-text font-semibold text-left leading-[120%] max-w-[28ch]">
           <span className="whitespace-nowrap">
             Gene
             <img

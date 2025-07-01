@@ -15,8 +15,8 @@ const techItems = [
 
 const Ecosystem = () => {
   return (
-    <div className="w-full px-4">
-      <div className="w-full flex flex-col justify-center items-center space-y-2 mt-10">
+    <div className="w-full px-4 py-30 flex flex-col justify-center items-center">
+      <div className="w-full flex flex-col justify-center items-center space-y-2">
         <h1 className="text-md text-primary-text font-semibold text-center leading-[120%]">
           Discover what is powering the GeneAlpha ecosystem.
         </h1>
@@ -27,12 +27,9 @@ const Ecosystem = () => {
       </div>
 
       {/* Grid for Ecosystem logos */}
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mt-10 max-w-screen-lg mx-auto">
+      <div className="grid grid-cols-2 md:grid-cols-5 mt-10 max-w-6xl">
         {techItems.map((item, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center text-center space-y-2"
-          >
+          <div key={index} className="flex flex-col items-center text-center ">
             <img
               src={item.src}
               alt={item.name}
