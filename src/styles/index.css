@@ -8,6 +8,7 @@ body {
 
 @theme {
   --font-inter: "Inter", sans-serif;
+  --font-jetbrains-mono: "JetBrains Mono", monospace;
   --breakpoint-3xl: 120rem;
   --rounded-sm: 5px;
   --text-xl: 42px;
@@ -20,6 +21,7 @@ body {
   --color-secondary-text: #c0c0c0;
   --color-stroke-gray: #242424;
   --color-inactive-text: #97979c;
+  --color-dull-white: #f9f9f9;
 }
 
 /* styles.css or a module file */

@@ -5,6 +5,7 @@ import NavBar from "./components/navigation/NavBar";
 import Hero from "./components/hero/Hero";
 import Ecosystem from "./components/ecosystem/Ecosystem";
 import ProductVideo from "./components/ecosystem/ProductVideo";
+import ModelBreeding from "./components/model/ModelBreeding";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -21,6 +22,7 @@ function App() {
       <Hero />
       <Ecosystem />
       <ProductVideo />
+      <ModelBreeding />
     </div>
   );
 }
