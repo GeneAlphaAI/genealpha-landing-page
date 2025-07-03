@@ -6,6 +6,8 @@ import Hero from "./components/hero/Hero";
 import Ecosystem from "./components/ecosystem/Ecosystem";
 import ProductVideo from "./components/ecosystem/ProductVideo";
 import ModelBreeding from "./components/model/ModelBreeding";
+import Hive from "./components/hive/Hive";
+import Github from "./components/github/Github";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -23,6 +25,8 @@ function App() {
       <Ecosystem />
       <ProductVideo />
       <ModelBreeding />
+      <Hive />
+      <Github />
     </div>
   );
 }
