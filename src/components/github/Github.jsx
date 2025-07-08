@@ -30,7 +30,7 @@ const Github = () => {
   return (
     <div
       ref={sectionRef}
-      className="w-full border-2 border-white flex items-center justify-center py-30 overflow-hidden"
+      className="w-full flex items-center justify-center py-30 overflow-hidden"
     >
       <motion.div
         variants={fadeVariant({
