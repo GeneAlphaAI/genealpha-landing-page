@@ -7,7 +7,7 @@ const ModelCard = ({ title, hoverDescription, sideImage }) => {
         {title || "Baseline Model"}
       </h1>
 
-      <p className="max-w-[16ch] font-jetbrains-mono text-sm mt-4 text-white/40 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out">
+      <p className="max-w-[16ch] font-jetbrains-mono font-light text-xs uppercase mt-4 text-white/40 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out">
         {hoverDescription ||
           "It's a model that is untuned and readily available in the market."}
       </p>

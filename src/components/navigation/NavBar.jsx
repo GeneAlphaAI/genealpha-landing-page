@@ -31,7 +31,7 @@ const NavBar = () => {
             </a>
           ))}
         </div>
-        <PrimaryButton textSize="sm:text-xs" className="">
+        <PrimaryButton textSize="text-xs" className="">
           Launch Hive
         </PrimaryButton>
       </div>
