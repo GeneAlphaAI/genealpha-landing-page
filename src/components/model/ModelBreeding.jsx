@@ -26,7 +26,7 @@ const ModelBreeding = () => {
     },
   ];
   return (
-    <div className="w-full flex flex-col justify-center items-center space-y-10">
+    <div className="w-full flex flex-col justify-center items-center space-y-10 py-30">
       <div className="flex justify-center items-center">
         <h1 className="text-lg text-primary-text font-semibold text-center leading-[120%] max-w-[15ch]">
           Set the breeding ground for Alpha

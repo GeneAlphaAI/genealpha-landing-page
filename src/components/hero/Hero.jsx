@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="w-full max-w-6xl mt-10 space-y-[25px] z-[2]">
         <AnimatedHeadline />
         <motion.p
-          variants={wordFadeIn(0.5, 1)}
+          variants={wordFadeIn(1.5, 1)}
           initial="hidden"
           animate="show"
           className="text-secondary-text text-md max-w-[55ch]"
@@ -19,7 +19,7 @@ const Hero = () => {
           Algorithms.
         </motion.p>
         <motion.div
-          variants={wordFadeIn(0.9, 1)}
+          variants={wordFadeIn(2, 1)}
           initial="hidden"
           animate="show"
           className="flex items-center gap-10"
@@ -40,7 +40,7 @@ const Hero = () => {
       <motion.img
         variants={fadeVariant({
           direction: "down",
-          delay: 1,
+          delay: 3.5,
           duration: 0.7,
         })}
         initial="hidden"

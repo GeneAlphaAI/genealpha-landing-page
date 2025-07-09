@@ -23,7 +23,7 @@ const AnimatedHeadline = () => {
           return part.value.split(" ").map((word, j) => (
             <motion.span
               key={`word-${i}-${j}`}
-              variants={wordFadeIn(i + j, 0.05)}
+              variants={wordFadeIn(i + j, 0.09)}
               initial="hidden"
               animate="show"
               className="inline-block"

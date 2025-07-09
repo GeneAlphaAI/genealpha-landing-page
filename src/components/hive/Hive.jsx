@@ -3,7 +3,7 @@ import HiveCard from "./HiveCard";
 
 const Hive = () => {
   return (
-    <div className="w-full flex flex-col justify-center items-center space-y-10 my-60">
+    <div className="w-full flex flex-col justify-center items-center space-y-10 my-30">
       <div className="flex flex-col w-3xl items-center justify-center gap-3">
         <div className="flex w-full justify-left">
           <img
