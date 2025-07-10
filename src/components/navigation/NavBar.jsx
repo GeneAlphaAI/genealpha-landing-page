@@ -14,7 +14,7 @@ const navLinks = [
 
 const NavBar = () => {
   return (
-    <div className="p-4 w-full relative border-b-1 border-white/10 flex justify-center items-center">
+    <div className="sticky top-0 z-50 bg-primary/30 flex items-center justify-center backdrop-blur-lg border-b-[0.5px] border-white/10 p-4 w-full">
       <div className="flex flex-row max-w-6xl items-center space-x-6 w-full relative justify-between gap-12">
         <div className="scale-[1.1]">
           <AnimatedLogo />

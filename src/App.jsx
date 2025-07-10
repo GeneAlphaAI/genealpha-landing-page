@@ -8,6 +8,7 @@ import ProductVideo from "./components/ecosystem/ProductVideo";
 import ModelBreeding from "./components/model/ModelBreeding";
 import Hive from "./components/hive/Hive";
 import Github from "./components/github/Github";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -27,6 +28,7 @@ function App() {
       <ModelBreeding />
       <Hive />
       <Github />
+      <Footer />
     </div>
   );
 }
