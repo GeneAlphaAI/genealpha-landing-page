@@ -1,17 +1,13 @@
 import React from "react";
 import HiveCard from "./HiveCard";
+import AnimatedHiveLogo from "../animations/AnimatedHiveLogo";
 
 const Hive = () => {
   return (
     <div className="w-full flex flex-col justify-center items-center space-y-10 my-30">
       <div className="flex flex-col w-3xl items-center justify-center gap-3">
         <div className="flex w-full justify-left">
-          <img
-            src="/assets/hive/HiveLogo.svg"
-            alt="Hive Logo"
-            className="h-[73px]"
-          />
-
+          <AnimatedHiveLogo />
           <h1 className="text-lg text-primary-text font-semibold text-center leading-[120%] max-w-[15ch]">
             The Hive is where it all comes together
           </h1>

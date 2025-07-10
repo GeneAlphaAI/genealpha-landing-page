@@ -1,5 +1,6 @@
 import React from "react";
 import PrimaryButton from "../buttons/PrimaryButton";
+import AnimatedLogo from "../animations/AnimatedLogo";
 
 const navLinks = [
   { name: "Genetic Algorithm", href: "/" },
@@ -15,11 +16,10 @@ const NavBar = () => {
   return (
     <div className="p-4 w-full relative border-b-1 border-white/10 flex justify-center items-center">
       <div className="flex flex-row max-w-6xl items-center space-x-6 w-full relative justify-between gap-12">
-        <img
-          src="/assets/brand/GeneAlphaLogo.svg"
-          alt="GeneAlpha Logo"
-          className="h-[24px]"
-        />
+        <div className="scale-[1.1]">
+          <AnimatedLogo />
+        </div>
+
         <div className="flex gap-13">
           {navLinks.map((link) => (
             <a
@@ -31,7 +31,7 @@ const NavBar = () => {
             </a>
           ))}
         </div>
-        <PrimaryButton textSize="text-xs" className="">
+        <PrimaryButton textSize="text-sm" className="">
           Launch Hive
         </PrimaryButton>
       </div>

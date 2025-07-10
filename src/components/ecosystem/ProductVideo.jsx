@@ -46,10 +46,10 @@ const ProductVideo = () => {
                     />
                   </div>
 
-                  <p className="text-white text-lg font-medium">
+                  <p className="text-white text-lg leading-tight font-medium">
                     Watch the video
                   </p>
-                  <p className="text-white text-md font-medium">
+                  <p className="text-inactive-text text-md font-regular">
                     Introduction to GeneAlpha
                   </p>
                 </div>

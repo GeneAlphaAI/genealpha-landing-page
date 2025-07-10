@@ -118,6 +118,8 @@ const AnimatedCards = ({ shouldAnimate }) => {
         stroke="url(#paint0_linear_263_1831)"
         strokeWidth="0.5"
         strokeLinecap="round"
+        strokeOpacity="0.4"
+        filter="url(#blurFilter)"
       />
 
       {/* Right card group - animated */}
@@ -221,6 +223,9 @@ const AnimatedCards = ({ shouldAnimate }) => {
           <stop stopColor="#232324" />
           <stop offset="1" stopColor="white" />
         </linearGradient>
+        <filter id="blurFilter" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="0.9" />
+        </filter>
       </defs>
     </svg>
   );

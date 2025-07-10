@@ -40,7 +40,7 @@ const Hero = () => {
       <motion.img
         variants={fadeVariant({
           direction: "down",
-          delay: 3.5,
+          delay: 2.5,
           duration: 0.7,
         })}
         initial="hidden"
