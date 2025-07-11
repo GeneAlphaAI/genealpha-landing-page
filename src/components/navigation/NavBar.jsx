@@ -3,13 +3,13 @@ import PrimaryButton from "../buttons/PrimaryButton";
 import AnimatedLogo from "../animations/AnimatedLogo";
 
 const navLinks = [
-  { name: "Genetic Algorithm", href: "/" },
-  { name: "Model Breeding", href: "/explore" },
-  { name: "Hive", href: "/launch" },
-  { name: "GA Token", href: "/dashboard" },
-  { name: "Github", href: "/dashboard" },
-  { name: "Community", href: "/dashboard" },
-  { name: "Docs", href: "/dashboard" },
+  { name: "Genetic Algorithm", href: "/", type: "external" },
+  { name: "Model Breeding", href: "#breeding", type: "external" },
+  { name: "Hive", href: "#hive", type: "local" },
+  { name: "GA Token", href: "/token", type: "local" },
+  { name: "Github", href: "https://github.com/yourrepo", type: "external" },
+  { name: "Community", href: "https://github.com/yourrepo", type: "local" },
+  { name: "Docs", href: "https://github.com/yourrepo", type: "external" },
 ];
 
 const NavBar = () => {
@@ -25,7 +25,7 @@ const NavBar = () => {
             <a
               key={link.name}
               href={link.href}
-              className="text-inactive-text hover:text-white/40 transition-color text-xs font-semibold"
+              className="text-inactive-text hover:text-dull-white delay-50 transition-color text-xs font-semibold"
             >
               {link.name}
             </a>

@@ -1,33 +1,39 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import NavBar from "./components/navigation/NavBar";
-import Hero from "./components/hero/Hero";
-import Ecosystem from "./components/ecosystem/Ecosystem";
-import ProductVideo from "./components/ecosystem/ProductVideo";
-import ModelBreeding from "./components/model/ModelBreeding";
-import Hive from "./components/hive/Hive";
-import Github from "./components/github/Github";
 import Footer from "./components/footer/Footer";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
+import Landing from "./pages/Landing";
+import Token from "./pages/Token";
 
 function App() {
   const [count, setCount] = useState(0);
-
+  const location = useLocation();
   return (
-    <div className="font-inter bg-primary text-white min-h-screen">
+    <div className="font-inter bg-primary scroll-smooth text-white min-h-screen">
       <NavBar />
       <img
         src="/assets/gradients/MiddleGlow.svg"
-        className="w-full h-[150dvh] absolute top-60 top-[1500px] right-20 z-0 opacity-40 "
+        className="w-full h-[150dvh] absolute top-[1500px] right-20 z-0 opacity-40 "
         loading="lazy"
       />
+      <img
+        src="/assets/gradients/MiddleGlow.svg"
+        className="w-full h-full absolute top-[3500px] -right-300 z-0 opacity-40 "
+        loading="lazy"
+      />
+      <img
+        src="/assets/gradients/HiveGlow.svg"
+        className="w-full h-[150dvh] absolute top-[4000px] -right-100 z-0 opacity-40 "
+        loading="lazy"
+      />
+      <div className=" z-1">
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Landing />} />
+          <Route path="/token" element={<Token />} />
+          <Route path="*" element={<Navigate to={"/"} />} />
+        </Routes>
+      </div>
 
-      <Hero />
-      <Ecosystem />
-      <ProductVideo />
-      <ModelBreeding />
-      <Hive />
-      <Github />
       <Footer />
     </div>
   );

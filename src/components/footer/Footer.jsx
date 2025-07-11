@@ -1,5 +1,5 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 const Footer = () => {
   const socialLinks = [
     {
@@ -61,7 +61,7 @@ const Footer = () => {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:opacity-70 transition-opacity"
+                  className="hover:opacity-100 opacity-60 delay-50 transition-opacity"
                 >
                   <img src={link.icon} alt="social" className="w-5 h-5" />
                 </a>
@@ -81,7 +81,7 @@ const Footer = () => {
                   <li key={index}>
                     <a
                       href={link.href}
-                      className="text-xs text-inactive-text hover:text-white transition-colors"
+                      className="text-xs text-inactive-text hover:text-dull-white delay-50 transition-colors"
                     >
                       {link.name}
                     </a>
@@ -100,7 +100,7 @@ const Footer = () => {
                   <li key={index}>
                     <a
                       href={link.href}
-                      className="text-xs text-inactive-text hover:text-white transition-colors"
+                      className="text-xs text-inactive-text hover:text-dull-white delay-50 transition-colors"
                     >
                       {link.name}
                     </a>
@@ -119,7 +119,7 @@ const Footer = () => {
                   <li key={index}>
                     <a
                       href={link.href}
-                      className="text-xs text-inactive-text hover:text-white transition-colors"
+                      className="text-xs text-inactive-text hover:text-dull-white delay-50 transition-colors"
                     >
                       {link.name}
                     </a>
@@ -135,25 +135,30 @@ const Footer = () => {
           </span>
 
           <div className="flex gap-6 text-dark-gray">
-            <a href="/privacy" className="hover:text-white">
+            <a href="/privacy" className="hover:text-dull-white delay-50">
               Privacy Policy
             </a>
-            <a href="/cookies" className="hover:text-white">
+            <a href="/cookies" className="hover:text-dull-white delay-50">
               Cookie Policy
             </a>
-            <a href="/terms" className="hover:text-white">
+            <a href="/terms" className="hover:text-dull-white delay-50">
               Terms of Service
             </a>
           </div>
-          <div className="bg-white/10 flex text-xs items-center jusitfy-start rounded-[5px]">
-            <div className="size-[26px]">
+          <div className="bg-white/5 px-2 flex text-xs items-center justify-start rounded-[5px]">
+            <motion.div
+              className="size-[26px]"
+              animate={{
+                opacity: [1, 0.4, 1],
+              }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            >
               <img
                 src="/assets/footer/StatusGreen.svg"
                 alt="Status"
-                className=""
+                className="w-full h-full"
               />
-            </div>
-
+            </motion.div>
             <span className="text-[#B2B2B2] mr-2">All systems operational</span>
           </div>
         </div>

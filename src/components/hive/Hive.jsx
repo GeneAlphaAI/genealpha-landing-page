@@ -4,7 +4,10 @@ import AnimatedHiveLogo from "../animations/AnimatedHiveLogo";
 
 const Hive = () => {
   return (
-    <div className="w-full flex flex-col justify-center items-center space-y-10 my-30">
+    <section
+      id="hive"
+      className="w-full flex flex-col relative justify-center items-center space-y-10 py-30 overflow-x-hidden"
+    >
       <div className="flex flex-col w-3xl items-center justify-center gap-3">
         <div className="flex w-full justify-left">
           <AnimatedHiveLogo />
@@ -34,7 +37,7 @@ const Hive = () => {
         <div className="self-stretch w-[1px] border-l-1 border-stroke-gray"></div>
         <HiveCard image={"/assets/hive/Card2.png"} />
       </div>
-    </div>
+    </section>
   );
 };
 
