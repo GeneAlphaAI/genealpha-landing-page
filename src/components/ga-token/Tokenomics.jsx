@@ -1,5 +1,6 @@
 import React from 'react'
 import ModelCard from '../model/ModelCard'
+import UtilityModelCard from '../model/UtilityModelCard';
 
 function Tokenomics() {
   const tokenomics = [
@@ -54,7 +55,7 @@ function Tokenomics() {
       <div className="mt-20">
         <div className="grid grid-cols-3 justify-center items-start gap-[60px] max-w-[640px] mx-auto">
           {tokenomics.map((tokenomics, index) => (
-            <ModelCard key={index} fullWidth={true} title={tokenomics.title} tokenomicsStat={tokenomics.value} hoverDescription={tokenomics.description} type={tokenomics.highlight ? 2 : 1}  />
+            <UtilityModelCard key={index} fullWidth={true} title={tokenomics.title} tokenomicsStat={tokenomics.value} hoverDescription={tokenomics.description} type={tokenomics.highlight ? 2 : 1}  />
           ))}
         </div>
       </div>
