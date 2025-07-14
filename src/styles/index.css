@@ -25,6 +25,7 @@ body {
   --color-inactive-text: #97979c;
   --color-dull-white: #f9f9f9;
   --color-dark-gray: #686870;
+  --color-low-opacity-text: #97979C;
 }
 
 /* styles.css or a module file */
