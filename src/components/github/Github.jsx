@@ -30,7 +30,7 @@ const Github = () => {
   return (
     <div
       ref={sectionRef}
-      className="w-full flex items-center justify-center py-30 overflow-hidden"
+      className="w-full flex items-center px-5 1xl:px-0 justify-center py-30 overflow-hidden"
     >
       <motion.div
         variants={fadeVariant({
@@ -40,25 +40,28 @@ const Github = () => {
         })}
         initial="hidden"
         animate={hasAnimated ? "show" : "hidden"}
-        className="max-w-6xl w-full flex border-1 border-stroke-gray relative bg-primary px-10 rounded-[15px] h-[435px]"
+        className="max-w-6xl w-full flex flex-col px-3 overflow-hidden pb-6 md:py-0 md:flex-row border-1 border-stroke-gray relative bg-primary px-10 rounded-[15px]  md:max-h-[435px]"
       >
-        <AnimatedCards shouldAnimate={hasAnimated} />
+        <div className="max-w-[500px]">
+          <AnimatedCards shouldAnimate={hasAnimated} />
+        </div>
+
         <img
           src="/assets/github/CornerGlow.svg"
-          className="absolute inset-0 top-0 left-0 z-1 rounded-l-[15px]"
+          className="absolute inset-0 top-0 left-0 z-1 h-full rounded-l-[15px]"
           loading="lazy"
         />
         <div className="flex flex-col justify-center items-end ml-auto space-y-4">
           <BlurText
             text="See what team GeneAlpha is up-to through our GitHub"
-            className="text-lg text-primary-text font-semibold justify-end leading-[120%] max-w-[22ch]"
+            className="text-title-md sm:text-lg  text-primary-text font-semibold justify-end leading-[120%] max-w-[22ch]"
             delay={250}
             animateBy="words"
             direction="bottom"
             stepDuration={0.35}
             staggerType="overlap"
           />
-          <p className="text-secondary-text text-md text-right max-w-[30ch]">
+          <p className="text-secondary-text text-sm sm:text-md text-right max-w-[30ch]">
             Track latest updates and development updates with your up-to-date
             GitHub.
           </p>

@@ -56,7 +56,7 @@ const AnimatedCards = ({ shouldAnimate }) => {
   return (
     <svg
       ref={svgRef}
-      width="508"
+      width="100%"
       height="421"
       viewBox="0 0 508 421"
       fill="none"

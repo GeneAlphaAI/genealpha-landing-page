@@ -15,38 +15,58 @@ const sentence = [
   },
 ];
 
+const smallHeadline = "The Prediction Model That Evolves Itself";
+
 const AnimatedHeadline = () => {
   return (
-    <h1 className="text-xl text-primary-text font-semibold text-left leading-[120%] max-w-[28ch] flex flex-wrap gap-x-1">
-      {sentence.map((part, i) => {
-        if (part.type === "text") {
-          return part.value.split(" ").map((word, j) => (
-            <motion.span
-              key={`word-${i}-${j}`}
-              variants={wordFadeIn(i + j, 0.09)}
-              initial="hidden"
-              animate="show"
-              className="inline-block"
-            >
-              {word}&nbsp;
-            </motion.span>
-          ));
-        } else if (part.type === "image") {
-          return (
-            <motion.img
-              key={`image-${i}`}
-              src={part.value}
-              alt={part.alt}
-              variants={wordFadeIn(i)}
-              initial="hidden"
-              animate="show"
-              className="inline-block mt-2 h-[0.8em]"
-            />
-          );
-        }
-        return null;
-      })}
-    </h1>
+    <div>
+      {/* Main Headline - Visible on md and up */}
+      <h1 className="hidden sm:flex text-xl text-primary-text font-semibold text-left leading-[120%] max-w-[28ch] flex-wrap gap-x-1">
+        {sentence.map((part, i) => {
+          if (part.type === "text") {
+            return part.value.split(" ").map((word, j) => (
+              <motion.span
+                key={`word-${i}-${j}`}
+                variants={wordFadeIn(i + j, 0.09)}
+                initial="hidden"
+                animate="show"
+                className="inline-block"
+              >
+                {word}&nbsp;
+              </motion.span>
+            ));
+          } else if (part.type === "image") {
+            return (
+              <motion.img
+                key={`image-${i}`}
+                src={part.value}
+                alt={part.alt}
+                variants={wordFadeIn(i)}
+                initial="hidden"
+                animate="show"
+                className="inline-block mt-2 h-[0.8em]"
+              />
+            );
+          }
+          return null;
+        })}
+      </h1>
+
+      {/* Small Headline - Visible on mobile only */}
+      <h2 className="block sm:hidden text-xl text-primary-text font-semibold text-center leading-[120%]">
+        {smallHeadline.split(" ").map((word, i) => (
+          <motion.span
+            key={`small-word-${i}`}
+            variants={wordFadeIn(i, 0.09)}
+            initial="hidden"
+            animate="show"
+            className="inline-block mr-3"
+          >
+            {word}
+          </motion.span>
+        ))}
+      </h2>
+    </div>
   );
 };
 

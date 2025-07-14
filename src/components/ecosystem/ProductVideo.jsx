@@ -8,12 +8,12 @@ const ProductVideo = () => {
   };
 
   return (
-    <div className="w-full px-4 py-20">
+    <div className="w-full px-5 1xl:px-0 py-20">
       <div className="w-full flex flex-col justify-center items-center space-y-4">
-        <h1 className="text-lg text-primary-text font-semibold text-center leading-[120%]">
+        <h1 className="text-title-md sm:text-lg text-primary-text font-semibold text-center leading-[120%]">
           Let’s put your curiosity to rest.
         </h1>
-        <p className="text-secondary-text text-md text-center max-w-[60ch]">
+        <p className="text-secondary-text text-sm sm:text-md text-center max-w-[60ch]">
           Learn everything about the Genetic Algorithm in under 30 seconds.
         </p>
 
@@ -42,20 +42,20 @@ const ProductVideo = () => {
                     <img
                       src="/assets/ecosystem/PlayButton.svg"
                       alt="Play Button"
-                      className="size-15"
+                      className="size-8 sm:size-15"
                     />
                   </div>
 
-                  <p className="text-white text-lg leading-tight font-medium">
+                  <p className="text-white text-md sm:text-lg leading-tight font-medium">
                     Watch the video
                   </p>
-                  <p className="text-inactive-text text-md font-regular">
+                  <p className="text-inactive-text text-sm sm:text-md font-regular">
                     Introduction to GeneAlpha
                   </p>
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 w-full h-100 rounded-[15px] z-[3]  pointer-events-none bg-gradient-to-t from-primary to-transparent"></div>
-                <div className="absolute left-0 h-full z-[3] rounded-[15px] w-200  pointer-events-none bg-gradient-to-r from-primary to-transparent"></div>
-                <div className="absolute right-0 rounded-[15px] h-full z-[3] w-200  pointer-events-none bg-gradient-to-l from-primary to-transparent"></div>
+                <div className="absolute left-0 h-full z-[3] rounded-[15px] sm:w-200  pointer-events-none bg-gradient-to-r from-primary to-transparent"></div>
+                <div className="absolute right-0 rounded-[15px] h-full z-[3] sm:w-200  pointer-events-none bg-gradient-to-l from-primary to-transparent"></div>
               </div>
             </div>
           )}

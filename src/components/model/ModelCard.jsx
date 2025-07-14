@@ -1,8 +1,15 @@
 import React from "react";
 
-const ModelCard = ({ title, hoverDescription, sideImage }) => {
+const ModelCard = ({
+  title,
+  hoverDescription,
+  sideImage,
+  className = "min-w-[174px] min-h-[228px]",
+}) => {
   return (
-    <div className="group relative border border-stroke-gray min-w-[174px] min-h-[228px] overflow-hidden bg-white/5 shadow-[inset_0_0_48px_0px_rgba(255,255,255,0.04)] hover:drop-shadow-[0_0_45px_rgba(255,255,255,0.2)] rounded-[6px] p-4 transition-all duration-300 ease-in-out">
+    <div
+      className={`${className} group relative border border-stroke-gray  overflow-hidden bg-white/5 shadow-[inset_0_0_48px_0px_rgba(255,255,255,0.04)] hover:drop-shadow-[0_0_45px_rgba(255,255,255,0.2)] rounded-[6px] p-4 transition-all duration-300 ease-in-out`}
+    >
       <h1 className="text-sm uppercase text-dull-white font-jetbrains-mono text-left leading-[120%] max-w-[8ch]">
         {title || "Baseline Model"}
       </h1>
