@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { wordFadeIn } from "../../utilities/Motion";
+import AnimatedLogo from "../animations/AnimatedLogo";
 
 const sentence = [
   { type: "text", value: "Gene" },
@@ -37,15 +38,17 @@ const AnimatedHeadline = () => {
             ));
           } else if (part.type === "image") {
             return (
-              <motion.img
+              <motion.div
                 key={`image-${i}`}
                 src={part.value}
                 alt={part.alt}
                 variants={wordFadeIn(i)}
                 initial="hidden"
                 animate="show"
-                className="inline-block mt-2 h-[0.8em]"
-              />
+                className="h-max mt-[14.5px] mr-1 scale-[1.4]"
+              >
+                <AnimatedLogo />
+              </motion.div>
             );
           }
           return null;
