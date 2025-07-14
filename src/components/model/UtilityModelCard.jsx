@@ -1,5 +1,6 @@
 import React from "react";
 import { formatValue } from "../../utilities/helpers";
+import CopyButton from "../buttons/CopyButton";
 
 // Helper function to check if value is a token address
 const isTokenAddress = (value) => {
@@ -49,14 +50,10 @@ const UtilityModelCard = ({
         </h1>
         {tokenomicsStat && (
           <p
-            className={`text-low-opacity-text text-xs font-inter font-light uppercase break-all leading-tight ${
+            className={`text-low-opacity-text text-xs font-jetbrains-mono font-light uppercase break-all leading-tight ${
               isTokenAddress(tokenomicsStat)
                 ? "cursor-pointer hover:text-white/60 transition-colors"
                 : ""
-            } ${
-              type === 2
-                ? ""
-                : "opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
             }`}
             onClick={() =>
               isTokenAddress(tokenomicsStat) && copyToClipboard(tokenomicsStat)
@@ -68,15 +65,17 @@ const UtilityModelCard = ({
       </div>
 
       <p
-        className={`max-w-[16ch] font-jetbrains-mono font-light text-xs uppercase mt-4 text-white/40 ${
-          type === 2
-            ? ""
-            : "opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out"
-        }`}
+        className={
+          "max-w-[18ch] font-jetbrains-mono font-light text-xs uppercase mt-4 text-white/40 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out"
+        }
       >
-        {hoverDescription ||
-          "It's a model that is untuned and readily available in the market."}
+        {hoverDescription}
       </p>
+      {type === 2 && title && title.includes("CONTRACT") && (
+        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+          <CopyButton />
+        </div>
+      )}
 
       <div className="absolute inset-0 flex z-[10] flex-col justify-center items-center pointer-events-none">
         <img

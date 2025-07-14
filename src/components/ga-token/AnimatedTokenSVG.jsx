@@ -313,8 +313,8 @@ function AnimatedTokenSVG() {
           id="filter2_d_50_29"
           x="84.8822"
           y="54.3165"
-          width="583.144"
-          height="378.682"
+          width="783.144"
+          height="578.682"
           filterUnits="userSpaceOnUse"
           colorInterpolationFilters="sRGB"
         >

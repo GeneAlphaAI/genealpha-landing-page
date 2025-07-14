@@ -41,7 +41,7 @@ function Tokenomics() {
     },
   ];
   return (
-    <section className="pt-[150px] pb-[100px]">
+    <section className="pt-[150px]">
       <div className="flex justify-center items-center">
         <h1 className="text-lg text-primary-text font-semibold text-left leading-[120%] max-w-[15ch]">
           The Tokenomics of GeneAlpha

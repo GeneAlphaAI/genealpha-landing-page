@@ -5,34 +5,35 @@ import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 gsap.registerPlugin(DrawSVGPlugin);
 
 function FingerPrintAnimation() {
-  const svgRef = useRef(null);
+//   const svgRef = useRef(null);
 
-  useEffect(() => {
-    const svg = svgRef.current;
-    if (!svg) return;
-    const paths = Array.from(
-      svg.querySelectorAll(".fingerprint-path")
-    ).reverse();
-    gsap.set(paths, { drawSVG: "0% 0%" });
-    const tl = gsap.timeline({ repeat: -1, yoyo: true });
-    paths.forEach((path, i) => {
-      tl.to(
-        path,
-        { drawSVG: "0% 100%", duration: 0.15, ease: "power1.inOut" },
-        i * 0.08
-      );
-    });
-    return () => tl.kill();
-  }, []);
+//   useEffect(() => {
+//     const svg = svgRef.current;
+//     if (!svg) return;
+//     const paths = Array.from(
+//       svg.querySelectorAll(".fingerprint-path")
+//     ).reverse();
+//     gsap.set(paths, { drawSVG: "0% 0%" });
+//     const tl = gsap.timeline({ repeat: -1, yoyo: true });
+//     paths.forEach((path, i) => {
+//       tl.to(
+//         path,
+//         { drawSVG: "0% 100%", duration: 0.15, ease: "power1.inOut" },
+//         i * 0.08
+//       );
+//     });
+//     return () => tl.kill();
+//   }, []);
 
   return (
     <svg
-      ref={svgRef}
+    //   ref={svgRef}
       width="901"
       height="1117"
       viewBox="0 0 901 1117"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="pr-5"
     >
       <mask
         id="mask0_552_1428"
