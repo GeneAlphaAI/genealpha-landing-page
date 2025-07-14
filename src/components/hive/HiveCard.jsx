@@ -2,7 +2,7 @@ import React from "react";
 
 const HiveCard = ({ title, subtitle, image }) => {
   return (
-    <div className="w-max flex flex-col justify-center items-center px-5 py-8">
+    <div className="1xl:w-max flex flex-col justify-center items-center px-5 py-8">
       <div className=" flex flex-col justify-start space-y-2">
         <h1 className="text-[18px] text-primary-text font-semibold text-left leading-[120%]">
           {title || "Model performance tracked clearly"}
@@ -14,7 +14,7 @@ const HiveCard = ({ title, subtitle, image }) => {
         <img
           src={image}
           alt="DApp PNG"
-          className="max-w-[500px] w-full mt-10"
+          className="w-full 1xl:max-w-[350px] 2xl:max-w-[500px] mt-10"
         />
       </div>
     </div>

@@ -3,7 +3,7 @@ import React from "react";
 const WideModelCard = ({ title, sideImage, background = true }) => {
   return (
     <div
-      className={`group relative border border-stroke-gray max-w-5xl w-full min-h-[110px] overflow-hidden ${
+      className={`group relative border border-stroke-gray w-full min-h-[110px] overflow-hidden ${
         background
           ? "bg-white/5 shadow-[inset_0_0_48px_0px_rgba(255,255,255,0.04)]"
           : "bg-transparent"

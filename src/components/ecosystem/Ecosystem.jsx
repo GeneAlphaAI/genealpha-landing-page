@@ -78,7 +78,7 @@ const Ecosystem = () => {
   const [hoveredItem, setHoveredItem] = useState(null);
 
   return (
-    <div className="w-full px-4 py-30 flex flex-col justify-center items-center">
+    <div className="w-full px-4 py-30 flex flex-col px-5 1xl:px-0 justify-center items-center">
       <div className="w-full flex flex-col justify-center items-center space-y-2">
         <h1 className="text-md text-primary-text font-semibold text-center leading-[120%]">
           Discover what is powering the GeneAlpha ecosystem.
@@ -119,7 +119,7 @@ const Ecosystem = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.25, ease: "easeInOut" }}
-              className="absolute inset-0 bg-primary/20 backdrop-blur-md z-10 gap-6 flex flex-row items-center justify-center pointer-events-none"
+              className="absolute inset-0 bg-primary/20 backdrop-blur-md z-10 gap-6 flex flex-col sm:flex-row items-center justify-center pointer-events-none"
             >
               <motion.div
                 src={hoveredItem.src}

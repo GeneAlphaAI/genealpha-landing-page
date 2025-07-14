@@ -38,9 +38,9 @@ const Footer = () => {
   ];
 
   return (
-    <div className="w-full h-[436px] border-t-[0.5px] border-stroke-gray items-center justify-center flex mt-30">
-      <div className="w-6xl flex  h-full py-30 flex-col">
-        <div className="flex w-full items-start justify-between">
+    <div className="w-full h-[436px] border-t-[0.5px] border-stroke-gray items-center px-5 1xl:px-0 justify-center flex mt-30">
+      <div className="w-6xl flex h-full py-30 flex-col">
+        <div className="flex gap-10 flex-col 1xl:flex-row  w-full items-start justify-between">
           {/* Left: Logo and description */}
           <div className="h-full flex flex-col justify-between">
             <div className="flex flex-col gap-3">
@@ -70,9 +70,9 @@ const Footer = () => {
           </div>
 
           {/* Right: Sitemap, Resources, Connect */}
-          <div className="flex flex-col w-full md:flex-row justify-between max-w-[600px] mr-20">
+          <div className="flex flex-wrap w-full md:flex-row justify-between w-auto gap-10 1xl:max-w-[600px] 1xl:mr-20">
             {/* Sitemap */}
-            <div>
+            <div className="flex flex-col">
               <h4 className="text-xs font-semibold text-dull-white mb-8">
                 Sitemap
               </h4>
@@ -91,7 +91,7 @@ const Footer = () => {
             </div>
 
             {/* Resources */}
-            <div>
+            <div className="flex flex-col">
               <h4 className="text-xs font-semibold text-dull-white mb-8">
                 Resources
               </h4>
@@ -110,7 +110,7 @@ const Footer = () => {
             </div>
 
             {/* Connect */}
-            <div>
+            <div className="flex flex-col">
               <h4 className="text-xs font-semibold text-dull-white mb-8">
                 Connect
               </h4>
@@ -129,7 +129,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="w-full flex justify-between text-xs items-center h-[36px] mt-10">
+        <div className="w-full hidden md:flex justify-between text-xs items-center h-[36px] mt-10 pb-5">
           <span className="text-dark-gray">
             All rights reserved © {new Date().getFullYear()} GeneAlpha
           </span>
@@ -161,6 +161,39 @@ const Footer = () => {
             </motion.div>
             <span className="text-[#B2B2B2] mr-2">All systems operational</span>
           </div>
+        </div>
+        <div className="w-full gap-5 flex flex-col md:hidden justify-between text-xs items-center h-[36px] mt-10 pb-5">
+          <div className="bg-white/5 px-2 flex text-xs items-center justify-start rounded-[5px]">
+            <motion.div
+              className="size-[26px]"
+              animate={{
+                opacity: [1, 0.4, 1],
+              }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <img
+                src="/assets/footer/StatusGreen.svg"
+                alt="Status"
+                className="w-full h-full"
+              />
+            </motion.div>
+            <span className="text-[#B2B2B2] mr-2">All systems operational</span>
+          </div>
+          <div className="flex gap-6 text-dark-gray">
+            <a href="/privacy" className="hover:text-dull-white delay-50">
+              Privacy Policy
+            </a>
+            <a href="/cookies" className="hover:text-dull-white delay-50">
+              Cookie Policy
+            </a>
+            <a href="/terms" className="hover:text-dull-white delay-50">
+              Terms of Service
+            </a>
+          </div>
+
+          <span className="text-dark-gray pb-5">
+            All rights reserved © {new Date().getFullYear()} GeneAlpha
+          </span>
         </div>
       </div>
     </div>
