@@ -21,7 +21,10 @@ function App() {
         onHamburgerClick={handleHamburgerClick}
         onCloseDrawer={handleCloseDrawer}
       />
-      <MobileSidebar isOpen={isDrawerOpen} />
+      <MobileSidebar
+        isOpen={isDrawerOpen}
+        onClose={() => handleCloseDrawer()}
+      />
       {/* <img
         src="/assets/gradients/MiddleGlow.svg"
         className="w-full h-[150dvh] absolute top-[1500px] right-20 z-0 opacity-40 "

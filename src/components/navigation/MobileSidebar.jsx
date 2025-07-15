@@ -2,16 +2,16 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const navLinks = [
-  { name: "Genetic Algorithm", href: "/", type: "external" },
+  { name: "Genetic Algorithm", href: "#product", type: "local" },
   { name: "Model Breeding", href: "#breeding", type: "local" },
   { name: "Hive", href: "#hive", type: "local" },
   { name: "GA Token", href: "/token", type: "local" },
-  { name: "Github", href: "https://github.com/yourrepo", type: "external" },
-  { name: "Community", href: "https://github.com/yourrepo", type: "local" },
+  { name: "Github", href: "#github", type: "local" },
+  { name: "Community", href: "https://github.com/yourrepo", type: "external" },
   { name: "Docs", href: "https://github.com/yourrepo", type: "external" },
 ];
 
-const MobileSidebar = ({ isOpen }) => {
+const MobileSidebar = ({ isOpen, onClose }) => {
   const location = useLocation();
 
   return (
@@ -29,7 +29,12 @@ const MobileSidebar = ({ isOpen }) => {
 
           if (type === "local") {
             return (
-              <a key={name} href={href} className={linkClass}>
+              <a
+                key={name}
+                href={href}
+                className={linkClass}
+                onClick={() => onClose()}
+              >
                 {name}
               </a>
             );
@@ -42,6 +47,7 @@ const MobileSidebar = ({ isOpen }) => {
               target="_blank"
               rel="noopener noreferrer"
               className={linkClass}
+              onClick={() => onClose()}
             >
               {name}
             </a>

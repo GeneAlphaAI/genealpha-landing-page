@@ -7,22 +7,31 @@ const ModelDesktop = () => {
     {
       title: "OFFSPRING",
       sideImage: "/assets/model/ModelDots1.svg",
+      description:
+        "Tuned descendant model, optimized for higher accuracy than baseline.",
     },
     {
       title: "OFFSPRING",
       sideImage: "/assets/model/ModelDots2.svg",
+      description:
+        "Tuned descendant model, optimized for higher accuracy than baseline.",
     },
     {
       title: "OFFSPRING",
       sideImage: "/assets/model/ModelDots3.svg",
+      description:
+        "Tuned descendant model, optimized for higher accuracy than baseline.",
     },
     {
       title: "ALPHA",
       sideImage: "/assets/model/ModelDots4.svg",
+      description: "The crowned champion that bested the rest of the models.",
     },
     {
       title: "OFFSPRING",
       sideImage: "/assets/model/ModelDots5.svg",
+      description:
+        "Tuned descendant model, optimized for higher accuracy than baseline.",
     },
   ];
   return (
@@ -55,7 +64,12 @@ const ModelDesktop = () => {
         </svg>
       </div>
       <div className="w-full items-center justify-center flex flex-col">
-        <WideModelCard title="METRIC INFLUENCE ANALYSIS" />
+        <WideModelCard
+          title="METRIC INFLUENCE ANALYSIS"
+          hoverDescription={
+            "A clear breakdown of how each feature shapes the model’s output, spotlighting the strongest drivers and revealing hidden biases."
+          }
+        />
         <div className="relative w-[4px] h-[37px] z-0">
           <svg
             width="4"
@@ -71,7 +85,12 @@ const ModelDesktop = () => {
           </svg>
         </div>
 
-        <WideModelCard title="WEIGHTED SCORING" />
+        <WideModelCard
+          title="WEIGHTED SCORING"
+          hoverDescription={
+            "A composite score that blends multiple performance metrics—each weighted by relevance—so you can rank models with a single, objective number."
+          }
+        />
         <div className="relative w-[4px] h-[37px] z-0">
           <svg
             width="4"
@@ -91,6 +110,9 @@ const ModelDesktop = () => {
           title="CROSSOVER & MUTATION"
           background={false}
           sideImage={"/assets/model/WideModelDots.svg"}
+          hoverDescription={
+            "Genetic-style operations that blend top performers and inject targeted tweaks—generating fresh model variants primed to outperform their parents."
+          }
         />
       </div>
       <div className="relative w-[837px] h-[37px] z-0">
@@ -122,6 +144,7 @@ const ModelDesktop = () => {
             key={`custom-${idx}`}
             title={card.title}
             sideImage={card.sideImage}
+            hoverDescription={card?.description}
           />
         ))}
       </div>

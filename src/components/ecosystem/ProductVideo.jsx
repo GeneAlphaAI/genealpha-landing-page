@@ -8,13 +8,13 @@ const ProductVideo = () => {
   };
 
   return (
-    <div className="w-full px-5 1xl:px-0 py-20">
+    <section id="product" className="w-full px-5 1xl:px-0 py-20">
       <div className="w-full flex flex-col justify-center items-center space-y-4">
         <h1 className="text-title-md sm:text-lg text-primary-text font-semibold text-center leading-[120%]">
           Let’s put your curiosity to rest.
         </h1>
         <p className="text-secondary-text text-sm sm:text-md text-center max-w-[60ch]">
-          Learn everything about the Genetic Algorithm in under 30 seconds.
+          Learn everything about the Genetic Algorithm in under 60 seconds.
         </p>
 
         {/* Video Section */}
@@ -61,7 +61,7 @@ const ProductVideo = () => {
           )}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

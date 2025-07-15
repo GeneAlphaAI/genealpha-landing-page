@@ -6,13 +6,13 @@ import { fadeVariant, wordFadeIn } from "../../utilities/Motion";
 const Hero = () => {
   return (
     <div className="w-full flex flex-col relative h-[120dvh] xs:h-[130dvh] overflow-hidden items-center">
-      <div className="w-full max-w-6xl mt-10 space-y-[25px] px-5 1xl:px-0 z-[4]">
+      <div className="w-full max-w-6xl flex items-center justify-center flex-col mt-10 space-y-[25px] px-5 1xl:px-0 z-[4]">
         <AnimatedHeadline />
         <motion.p
           variants={wordFadeIn(1.5, 1)}
           initial="hidden"
           animate="show"
-          className="text-secondary-text text-center sm:text-left text-md max-w-[55ch]"
+          className="text-secondary-text text-center text-md max-w-[55ch]"
         >
           Model Zoo based prediction system using more than 15 baseline models
           to breed the strongest prediction model to date using Genetic

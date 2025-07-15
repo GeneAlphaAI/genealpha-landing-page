@@ -20,13 +20,14 @@ body {
   --text-md: 22px;
   --text-sm: 14px;
   --text-xs: 12px;
-  --color-primary: #0a0a0b;
+  --color-primary: #040404;
   --color-primary-text: #f9f9f9;
   --color-secondary-text: #c0c0c0;
   --color-stroke-gray: #242424;
   --color-inactive-text: #97979c;
   --color-dull-white: #f9f9f9;
   --color-dark-gray: #686870;
+  --color-dull-gray: #686870;
 }
 
 /* styles.css or a module file */
