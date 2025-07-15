@@ -19,7 +19,7 @@ function AnimatedTokenSVG() {
 
     // Set initial states for blur clip paths
     gsap.set(
-      "#bgblur_0_50_29_clip_path, #bgblur_1_50_29_clip_path, #bgblur_2_50_29_clip_path",
+      "#blur-circle-1, #blur-circle-2, #blur-circle-3",
       {
         opacity: 0,
       }
@@ -38,7 +38,7 @@ function AnimatedTokenSVG() {
       })
       // Fade in clip path for circle-1
       .to(
-        "#bgblur_0_50_29_clip_path",
+        "#blur-circle-1",
         {
           opacity: 1,
           duration: 0.4,
@@ -52,7 +52,8 @@ function AnimatedTokenSVG() {
         "#stroke-1, #stroke-2, #stroke-3, #stroke-4, #stroke-5",
         {
           opacity: 1,
-          scale: 0.9,
+          scale: 0.84,
+          y: 2,
           duration: 0.6,
           ease: "back.out(1.4)",
           stagger: 0.15,
@@ -73,13 +74,13 @@ function AnimatedTokenSVG() {
       ) // 0.6s back from current position aligns with stroke-2
       // Fade in clip path for circle-2
       .to(
-        "#bgblur_1_50_29_clip_path",
+        "#blur-circle-2",
         {
           opacity: 1,
           duration: 0.4,
           ease: "power2.out",
         },
-        "-=0.4"
+        "-=0.6"
       )
 
       // Fade in circle-3 when stroke-5 starts (0.6s after stroke-1)
@@ -95,13 +96,13 @@ function AnimatedTokenSVG() {
       ) // 0.3s back aligns with stroke-5
       // Fade in clip path for circle-3
       .to(
-        "#bgblur_2_50_29_clip_path",
+        "#blur-circle-3",
         {
           opacity: 1,
           duration: 0.4,
           ease: "power2.out",
         },
-        "-=0.4"
+        "-=0.6"
       );
 
     return () => {
@@ -120,13 +121,9 @@ function AnimatedTokenSVG() {
       className="mx-auto"
     >
       <g filter="url(#filter0_d_50_29)">
-        <foreignObject
-          x="162.622"
-          y="111.258"
-          width="716.357"
-          height="443.148"
-        >
+        <foreignObject x="162.622" y="111.258" width="716.357" height="443.148">
           <div
+            id="blur-circle-1"
             xmlns="http://www.w3.org/1999/xhtml"
             style={{
               backdropFilter: "blur(17.5px)",
@@ -199,6 +196,7 @@ function AnimatedTokenSVG() {
       </g>
       <foreignObject x="307.432" y="27.391" width="416.291" height="269.92">
         <div
+          id="blur-circle-2"
           xmlns="http://www.w3.org/1999/xhtml"
           style={{
             backdropFilter: "blur(17.5px)",
@@ -227,13 +225,9 @@ function AnimatedTokenSVG() {
           strokeWidth="2.24403"
         />
       </g>
-      <foreignObject
-        x="5.36471"
-        y="101.827"
-        width="261.184"
-        height="180.376"
-      >
+      <foreignObject x="5.36471" y="101.827" width="261.184" height="180.376">
         <div
+          id="blur-circle-3"
           xmlns="http://www.w3.org/1999/xhtml"
           style={{
             backdropFilter: "blur(17.5px)",
