@@ -116,10 +116,10 @@ const AnimatedCards = ({ shouldAnimate }) => {
         ref={lineRef}
         d="M311.127 216L105.761 121.795"
         stroke="url(#paint0_linear_263_1831)"
-        strokeWidth="0.5"
+        strokeWidth="1"
         strokeLinecap="round"
-        strokeOpacity="0.4"
-        filter="url(#blurFilter)"
+        strokeOpacity="0.15"
+        // filter="url(#blurFilter)"
       />
 
       {/* Right card group - animated */}

@@ -27,7 +27,7 @@ const ModelCard = ({
         />
       </div>
       {sideImage && (
-        <div className="absolute bottom-0 right-0 p-3 flex z-[10] flex-col justify-center items-center pointer-events-none">
+        <div className="absolute bottom-0 w-[60px] md:w-[80px] lg:w-max right-0 p-3 flex z-[10] flex-col justify-center items-center pointer-events-none">
           <img src={sideImage} alt="Dots" className="" />
         </div>
       )}

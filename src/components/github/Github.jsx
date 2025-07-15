@@ -28,7 +28,8 @@ const Github = () => {
   }, [hasAnimated]);
 
   return (
-    <div
+    <section
+      id="github"
       ref={sectionRef}
       className="w-full flex items-center px-5 1xl:px-0 justify-center py-30 overflow-hidden"
     >
@@ -65,12 +66,18 @@ const Github = () => {
             Track latest updates and development updates with your up-to-date
             GitHub.
           </p>
-          <PrimaryButton defaultPadding="px-10 py-2">
+          <PrimaryButton
+            defaultPadding="px-10 py-2 z-1"
+            onClick={() => {
+              console.log("clicked");
+              window.open("https://github.com/GeneAlphaAI", "_blank");
+            }}
+          >
             Visit GitHub
           </PrimaryButton>
         </div>
       </motion.div>
-    </div>
+    </section>
   );
 };
 

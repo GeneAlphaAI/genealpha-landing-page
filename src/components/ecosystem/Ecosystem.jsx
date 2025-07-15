@@ -104,7 +104,7 @@ const Ecosystem = () => {
               <img
                 src={item.src}
                 alt={item.name}
-                className="w-full h-full w-auto object-contain"
+                className="max-w-[180px] md:w-full h-full w-auto object-contain"
               />
             </div>
           ))}

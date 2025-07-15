@@ -1,50 +1,59 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const navLinks = [
-  { name: "Genetic Algorithm", href: "/", type: "external" },
+  { name: "Genetic Algorithm", href: "#product", type: "local" },
   { name: "Model Breeding", href: "#breeding", type: "local" },
   { name: "Hive", href: "#hive", type: "local" },
   { name: "GA Token", href: "/token", type: "local" },
-  { name: "Github", href: "https://github.com/yourrepo", type: "external" },
-  { name: "Community", href: "https://github.com/yourrepo", type: "local" },
+  { name: "Github", href: "#github", type: "local" },
+  { name: "Community", href: "https://github.com/yourrepo", type: "external" },
   { name: "Docs", href: "https://github.com/yourrepo", type: "external" },
 ];
 
-const MobileSidebar = ({ isOpen }) => {
+const MobileSidebar = ({ isOpen, onClose }) => {
+  const navigate = useNavigate();
   const location = useLocation();
+
+  const handleLinkClick = (href, type) => {
+    if (type === "local") {
+      if (href.startsWith("#")) {
+        if (location.pathname !== "/") {
+          navigate("/", { state: { scrollTo: href } });
+        } else {
+          const element = document.querySelector(href);
+          if (element) element.scrollIntoView({ behavior: "smooth" });
+        }
+      } else {
+        navigate(href);
+      }
+    } else {
+      window.open(href, "_blank");
+    }
+    onClose();
+  };
 
   return (
     <div
-      className={`fixed top-[64px] left-0 h-[calc(100%-64px)] w-full z-40 bg-primary/80 backdrop-blur-lg p-4 transition-transform duration-300 ${
+      className={`fixed top-[60px] left-0 h-[calc(100%-60px)] w-full z-40 bg-primary/80 backdrop-blur-lg p-4 transition-transform duration-300 ${
         isOpen ? "translate-x-0" : "-translate-x-full"
       } 1xl:hidden`}
     >
       <div className="flex flex-col gap-2">
         {navLinks.map(({ name, href, type }) => {
           const isActive = location.pathname === href;
-          const linkClass = `px-3 py-2 rounded-lg transition text-sm ${
+          const linkClass = `px-3 py-2 rounded-lg cursor-pointer transition text-sm ${
             isActive ? "bg-white/10 text-white" : "text-dull-white"
           }`;
 
-          if (type === "local") {
-            return (
-              <a key={name} href={href} className={linkClass}>
-                {name}
-              </a>
-            );
-          }
-
           return (
-            <a
+            <button
               key={name}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={linkClass}
+              className={linkClass + " text-left"}
+              onClick={() => handleLinkClick(href, type)}
             >
               {name}
-            </a>
+            </button>
           );
         })}
       </div>

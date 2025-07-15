@@ -22,7 +22,7 @@ const AnimatedHeadline = () => {
   return (
     <div>
       {/* Main Headline - Visible on md and up */}
-      <h1 className="hidden sm:flex text-xl text-primary-text font-semibold text-left leading-[120%] max-w-[28ch] flex-wrap gap-x-1">
+      <h1 className="hidden sm:flex justify-center text-xl text-primary-text font-semibold text-center leading-[120%] max-w-[28ch] flex-wrap gap-x-1">
         {sentence.map((part, i) => {
           if (part.type === "text") {
             return part.value.split(" ").map((word, j) => (

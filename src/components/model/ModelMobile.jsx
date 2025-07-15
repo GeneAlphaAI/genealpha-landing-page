@@ -7,14 +7,19 @@ const ModelMobile = () => {
     {
       title: "OFFSPRING",
       sideImage: "/assets/model/ModelDots3.svg",
+      description:
+        "Tuned descendant model, optimized for higher accuracy than baseline.",
     },
     {
       title: "ALPHA",
       sideImage: "/assets/model/ModelDots4.svg",
+      description: "The crowned champion that bested the rest of the models.",
     },
     {
       title: "OFFSPRING",
       sideImage: "/assets/model/ModelDots5.svg",
+      description:
+        "Tuned descendant model, optimized for higher accuracy than baseline.",
     },
   ];
   return (

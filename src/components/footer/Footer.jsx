@@ -38,8 +38,8 @@ const Footer = () => {
   ];
 
   return (
-    <div className="w-full h-[436px] border-t-[0.5px] border-stroke-gray items-center px-5 1xl:px-0 justify-center flex mt-30">
-      <div className="w-6xl flex h-full py-30 flex-col">
+    <div className="w-full h-max md:h-[436px] border-t-[0.5px] border-stroke-gray items-center px-5 1xl:px-0 justify-center flex mt-30">
+      <div className="w-6xl flex h-full py-10 md:py-30 flex-col">
         <div className="flex gap-10 flex-col 1xl:flex-row  w-full items-start justify-between">
           {/* Left: Logo and description */}
           <div className="h-full flex flex-col justify-between">
