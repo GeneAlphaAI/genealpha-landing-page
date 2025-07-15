@@ -4,7 +4,7 @@ import { wordFadeIn } from "../../utilities/Motion";
 const sentence = [
   {
     type: "text",
-    value: "Explore the Alpha that comes with the $GA token by GeneAlpha",
+    value: "Introducing $GA, the powerful GeneAlpha token that supercharges the ecosystem.",
   },
 ];
 
