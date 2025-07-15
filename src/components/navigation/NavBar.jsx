@@ -41,7 +41,7 @@ const NavBar = ({ isDrawerOpen, onHamburgerClick, onCloseDrawer }) => {
         <div className="hidden 1xl:flex gap-13">
           {navLinks.map(({ name, href, type }) => {
             const linkClass =
-              "text-inactive-text hover:text-dull-white delay-50 transition-color text-xs font-semibold";
+              "text-inactive-text hover:text-dull-white delay-50 cursor-pointer transition-color text-xs font-semibold";
 
             if (type === "local") {
               return (
