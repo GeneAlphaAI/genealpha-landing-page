@@ -34,7 +34,14 @@ const UtilityModelCard = ({
         type === 2
           ? "bg-transparent"
           : "bg-white/5 shadow-[inset_0_0_48px_0px_rgba(255,255,255,0.04)]"
-      }  hover:drop-shadow-[0_0_45px_rgba(255,255,255,0.2)] rounded-[6px] p-4 transition-all duration-300 ease-in-out`}
+      }  hover:drop-shadow-[0_0_45px_rgba(255,255,255,0.2)] rounded-[6px] p-4 transition-all duration-300 ease-in-out${
+        isTokenAddress(tokenomicsStat) ? " cursor-pointer" : ""
+      }`}
+      onClick={() => {
+        if (isTokenAddress(tokenomicsStat)) {
+          copyToClipboard(tokenomicsStat);
+        }
+      }}
     >
       <div
         className={`flex flex-col gap-[10px] ${
@@ -50,14 +57,11 @@ const UtilityModelCard = ({
         </h1>
         {tokenomicsStat && (
           <p
-            className={`text-low-opacity-text text-xs font-jetbrains-mono font-light uppercase break-all leading-tight ${
+            className={`text-low-opacity-text text-xs font-jetbrains-mono font-light uppercase break-all leading-tight${
               isTokenAddress(tokenomicsStat)
-                ? "cursor-pointer hover:text-white/60 transition-colors"
+                ? " hover:text-white/60 transition-colors"
                 : ""
             }`}
-            onClick={() =>
-              isTokenAddress(tokenomicsStat) && copyToClipboard(tokenomicsStat)
-            }
           >
             {formatValue(tokenomicsStat)}
           </p>

@@ -42,20 +42,27 @@ function Tokenomics() {
   ];
   return (
     <section className="pt-[150px]">
-      <div className="flex justify-center items-center">
-        <h1 className="text-lg text-primary-text font-semibold text-left leading-[120%] max-w-[15ch]">
+      <div className="flex flex-col gap-3 lg:flex-row justify-center items-center px-3 md:px-5 lg:px-0">
+        <h1 className="text-title-md sm:text-lg text-primary-text font-semibold text-center lg:text-left leading-[120%] max-w-[15ch]">
           The Tokenomics of GeneAlpha
         </h1>
-        <p className="text-secondary-text text-md text-left leading-[120%] max-w-[40ch]">
+        <p className="text-secondary-text text-sm sm:text-md text-center lg:text-left leading-[120%] max-w-[40ch]">
           Model breeding fine-tunes each baseline model according to weighted
           performance, breeding new, more-accurate models.
         </p>
       </div>
 
-      <div className="mt-20">
-        <div className="grid grid-cols-3 justify-center items-start gap-[60px] max-w-[640px] mx-auto">
+      <div className="mt-20 px-3 md:px-0">
+        <div className="grid grid-cols-2 sm:grid-cols-3 justify-center items-start gap-3 md:gap-[30px] lg:gap-[60px] max-w-[640px] mx-auto">
           {tokenomics.map((tokenomics, index) => (
-            <UtilityModelCard key={index} fullWidth={true} title={tokenomics.title} tokenomicsStat={tokenomics.value} hoverDescription={tokenomics.description} type={tokenomics.highlight ? 2 : 1}  />
+            <UtilityModelCard
+              key={index}
+              fullWidth={true}
+              title={tokenomics.title}
+              tokenomicsStat={tokenomics.value}
+              hoverDescription={tokenomics.description}
+              type={tokenomics.highlight ? 2 : 1}
+            />
           ))}
         </div>
       </div>

@@ -8,9 +8,9 @@ const sentence = [
   }
 ];
 
-const AnimatedHeadline = () => {
+const AnimatedHeadline = ({className="text-xl"}) => {
   return (
-    <h1 className="text-xl text-primary-text font-semibold text-center leading-[120%] max-w-[28ch] mx-auto flex justify-center flex-wrap gap-x-1">
+    <h1 className={` text-primary-text font-semibold text-center leading-[120%] max-w-[28ch] mx-auto flex justify-center flex-wrap gap-x-1 ${className}`}>
       {sentence.map((part, i) => {
         if (part.type === "text") {
           return part.value.split(" ").map((word, j) => (

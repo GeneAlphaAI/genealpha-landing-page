@@ -4,121 +4,119 @@ import { gsap } from "gsap";
 function AnimatedTokenSVG() {
   const svgRef = useRef(null);
 
-  useEffect(() => {
-    const svg = svgRef.current;
-    if (!svg) return;
+useEffect(() => {
+  const svg = svgRef.current;
+  if (!svg) return;
 
-    // Set initial states - use scale property instead of transform to preserve SVG filters
-    gsap.set(
-      "#circle-1, #stroke-1, #stroke-2, #stroke-3, #stroke-4, #stroke-5, #circle-2, #circle-3",
+  const mm = gsap.matchMedia();
+
+  mm.add("(max-width: 639px)", () => {
+    // Scale down the entire SVG on small screens (below 640px)
+    gsap.set(svg, { scale: 0.75, transformOrigin: "center top" });
+  });
+
+  mm.add("(min-width: 640px)", () => {
+    // Reset scale on larger screens
+    gsap.set(svg, { scale: 1, transformOrigin: "center top" });
+  });
+
+  // Set initial states - use scale property instead of transform to preserve SVG filters
+  gsap.set(
+    "#circle-1, #stroke-1, #stroke-2, #stroke-3, #stroke-4, #stroke-5, #circle-2, #circle-3",
+    {
+      opacity: 0,
+      scale: 0.8,
+    }
+  );
+
+  gsap.set("#blur-circle-1, #blur-circle-2, #blur-circle-3", {
+    opacity: 0,
+  });
+
+  const tl = gsap.timeline({ delay: 2 });
+
+  tl.to("#circle-1", {
+    opacity: 1,
+    scale: 1,
+    duration: 0.8,
+    ease: "back.out(1.7)",
+  })
+    .to(
+      "#blur-circle-1",
       {
-        opacity: 0,
-        scale: 0.8,
-      }
-    );
-
-    // Set initial states for blur clip paths
-    gsap.set(
-      "#blur-circle-1, #blur-circle-2, #blur-circle-3",
+        opacity: 1,
+        duration: 0.4,
+        ease: "power2.out",
+      },
+      "-=0.4"
+    )
+    .to(
+      "#stroke-1, #stroke-2, #stroke-3, #stroke-4, #stroke-5",
       {
-        opacity: 0,
-      }
-    );
-
-    // Create timeline
-    const tl = gsap.timeline({ delay: 2 }); // Start after text animations
-
-    tl
-      // Fade in circle-1 with bounce
-      .to("#circle-1", {
+        opacity: 1,
+        scale: 0.84,
+        y: 2,
+        duration: 0.6,
+        ease: "back.out(1.4)",
+        stagger: 0.15,
+      },
+      "-=0.2"
+    )
+    .to(
+      "#circle-2",
+      {
         opacity: 1,
         scale: 1,
-        duration: 0.8,
-        ease: "back.out(1.7)",
-      })
-      // Fade in clip path for circle-1
-      .to(
-        "#blur-circle-1",
-        {
-          opacity: 1,
-          duration: 0.4,
-          ease: "power2.out",
-        },
-        "-=0.4"
-      )
+        duration: 0.7,
+        ease: "back.out(1.5)",
+      },
+      "-=0.6"
+    )
+    .to(
+      "#blur-circle-2",
+      {
+        opacity: 1,
+        duration: 0.4,
+        ease: "power2.out",
+      },
+      "-=0.6"
+    )
+    .to(
+      "#circle-3",
+      {
+        opacity: 1,
+        scale: 1,
+        duration: 0.6,
+        ease: "back.out(1.3)",
+      },
+      "-=0.3"
+    )
+    .to(
+      "#blur-circle-3",
+      {
+        opacity: 1,
+        duration: 0.4,
+        ease: "power2.out",
+      },
+      "-=0.6"
+    );
 
-      // Fade in strokes with stagger and bounce
-      .to(
-        "#stroke-1, #stroke-2, #stroke-3, #stroke-4, #stroke-5",
-        {
-          opacity: 1,
-          scale: 0.84,
-          y: 2,
-          duration: 0.6,
-          ease: "back.out(1.4)",
-          stagger: 0.15,
-        },
-        "-=0.2"
-      )
+  return () => {
+    mm.revert(); // Clean up matchMedia listeners
+    tl.kill(); // Clean up GSAP timeline
+  };
+}, []);
 
-      // Fade in circle-2 when stroke-2 starts (0.15s after stroke-1)
-      .to(
-        "#circle-2",
-        {
-          opacity: 1,
-          scale: 1,
-          duration: 0.7,
-          ease: "back.out(1.5)",
-        },
-        "-=0.6"
-      ) // 0.6s back from current position aligns with stroke-2
-      // Fade in clip path for circle-2
-      .to(
-        "#blur-circle-2",
-        {
-          opacity: 1,
-          duration: 0.4,
-          ease: "power2.out",
-        },
-        "-=0.6"
-      )
-
-      // Fade in circle-3 when stroke-5 starts (0.6s after stroke-1)
-      .to(
-        "#circle-3",
-        {
-          opacity: 1,
-          scale: 1,
-          duration: 0.6,
-          ease: "back.out(1.3)",
-        },
-        "-=0.3"
-      ) // 0.3s back aligns with stroke-5
-      // Fade in clip path for circle-3
-      .to(
-        "#blur-circle-3",
-        {
-          opacity: 1,
-          duration: 0.4,
-          ease: "power2.out",
-        },
-        "-=0.6"
-      );
-
-    return () => {
-      tl.kill();
-    };
-  }, []);
 
   return (
     <svg
       ref={svgRef}
       width="978"
-      height="597"
+      height="auto"
       viewBox="0 0 978 597"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="mx-auto"
+      className="mx-auto max-w-full"
     >
       <g filter="url(#filter0_d_50_29)">
         <foreignObject x="162.622" y="111.258" width="716.357" height="443.148">

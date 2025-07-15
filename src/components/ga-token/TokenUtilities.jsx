@@ -29,7 +29,7 @@ const TokenUtilities = () => {
     },
   ];
   return (
-    <div className="w-full px-4 pt-30 pb-[150px] flex flex-col gap-[80px] justify-center items-center">
+    <div className="w-full px-4 pt-[200px] pb-[150px] flex flex-col gap-[80px] justify-center items-center">
       <div className="w-full flex flex-col justify-center items-center space-y-2">
         <h1 className="text-md text-primary-text font-semibold text-center leading-[120%]">
           Explore important utilities that comes with the $GA token
@@ -41,7 +41,7 @@ const TokenUtilities = () => {
       </div>
 
       {/* mapping utilities */}
-      <div className="grid grid-cols-2 gap-x-[120px] gap-y-[80px] max-w-[933px] w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[120px] gap-y-8 md:gap-y-[80px] max-w-[933px] w-full">
         {utilities.map((utility, index) => (
           <UtilityCard key={index} {...utility} />
         ))}
