@@ -28,7 +28,7 @@ const NavBar = ({ isDrawerOpen, onHamburgerClick, onCloseDrawer }) => {
     } else {
       navigate(href);
     }
-    onCloseDrawer?.(); // Close drawer if it's open
+    onCloseDrawer?.();
   };
 
   return (
@@ -74,7 +74,7 @@ const NavBar = ({ isDrawerOpen, onHamburgerClick, onCloseDrawer }) => {
 
           <button
             onClick={isDrawerOpen ? onCloseDrawer : onHamburgerClick}
-            className="block 1xl:hidden relative w-6 h-6 focus:outline-none"
+            className="block 1xl:hidden relative cursor-pointer w-6 h-6 focus:outline-none"
             aria-label={isDrawerOpen ? "Close menu" : "Open menu"}
           >
             {/* Hamburger Lines */}

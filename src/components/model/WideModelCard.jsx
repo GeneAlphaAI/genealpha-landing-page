@@ -17,7 +17,7 @@ const WideModelCard = ({
       <h1 className="text-sm uppercase text-dull-white font-jetbrains-mono text-left leading-[120%] max-w-[20ch]">
         {title || "Baseline Model"}
       </h1>
-      <p className="max-w-[80ch] font-jetbrains-mono font-light text-xs uppercase mt-4 text-white/40 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out">
+      <p className="max-w-[35ch] lg:max-w-[80ch] font-jetbrains-mono font-light text-xs uppercase mt-4 text-white/40 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out">
         {hoverDescription ||
           "It's a model that is untuned and readily available in the market."}
       </p>
@@ -34,7 +34,7 @@ const WideModelCard = ({
         />
       </div>
       {sideImage && (
-        <div className="absolute bottom-0 right-0 p-3 flex z-[10] flex-col justify-center items-center pointer-events-none">
+        <div className="absolute bottom-0 w-[180px] lg:w-max right-0 p-3 flex z-[10] flex-col justify-center items-center pointer-events-none">
           <img src={sideImage} alt="Dots" className="" />
         </div>
       )}
