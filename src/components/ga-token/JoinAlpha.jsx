@@ -6,7 +6,7 @@ import FingerPrintAnimation from './FingerPrintAnimation';
 function JoinAlpha() {
   return (
     <section>
-      <div className="max-w-[650px] mx-auto h-full -mt-[100px] -mb-[200px] relative bg-opacity-[20%]">
+      <div className="max-w-[650px] mpb-20 mt-72 lg:pb-28 mx-auto h-full relative bg-opacity-[20%]">
         <FingerPrintAnimation />
         <div className="flex flex-col justify-center items-center space-y-4 max-w-[420px] mx-auto  absolute top-1/2 -translate-y-1/2 left-0 right-0  px-3">
           <BlurText
