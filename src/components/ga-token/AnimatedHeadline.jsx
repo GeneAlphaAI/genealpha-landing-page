@@ -5,7 +5,7 @@ const sentence = [
   {
     type: "text",
     value: "Explore the Alpha that comes with the $GA token by GeneAlpha",
-  }
+  },
 ];
 
 const AnimatedHeadline = ({className="text-xl"}) => {

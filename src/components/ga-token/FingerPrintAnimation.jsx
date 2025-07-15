@@ -65,7 +65,7 @@ function FingerPrintAnimation() {
       viewBox="0 0 901 1117"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="pr-5"
+      className="md:pr-5 max-w-full"
     >
       <mask
         id="mask0_552_1428"

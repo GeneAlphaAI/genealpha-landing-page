@@ -9,16 +9,15 @@ function TokenIntro() {
   return (
     <div className="w-full flex flex-col relative overflow-hidden items-center">
       <div className="w-full max-w-6xl mt-10 space-y-[25px] z-[2] px-3">
-        <AnimatedHeadline className="text-4xl md:text-xl"/>
+        <AnimatedHeadline className="text-4xl md:text-xl" />
         <motion.p
           variants={wordFadeIn(1.5, 1)}
           initial="hidden"
           animate="show"
-          className="text-secondary-text text-base md:text-md max-w-[48ch] mx-auto text-center"
+          className="text-secondary-text text-base md:text-md max-w-[48ch] mx-auto text-center font-medium"
         >
-          From getting access to the Hive, to training machine learning models
-          using your own feature-set, everything is done using the GA and GA
-          token alone.
+          From unlocking the Hive to training models with your own feature set,
+          every action runs on the $GA token alone.
         </motion.p>
 
         <AnimatedTokenSVG />

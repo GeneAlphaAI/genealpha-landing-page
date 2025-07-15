@@ -9,7 +9,7 @@ function UtilityCard({icon, title, description}) {
           alt="icon"
           className="size-[20px] md:size-[22px] w-[20px] md:w-[22px] h-[20px] md:h-[22px] object-contain aspect-square"
         />
-        <h3 className="text-color-dull-white font-inter text-[16px] md:text-[18px] font-medium">{title}</h3>
+        <h3 className="text-dull-white font-inter text-[16px] md:text-[18px] font-medium">{title}</h3>
       </div>
       <p className="text-low-opacity-text text-xs md:text-sm font-inter font-normal">{description}</p>
     </div>

@@ -42,13 +42,13 @@ function Tokenomics() {
   ];
   return (
     <section className="pt-[150px]">
-      <div className="flex flex-col gap-3 lg:flex-row justify-center items-center px-3 md:px-5 lg:px-0">
-        <h1 className="text-title-md sm:text-lg text-primary-text font-semibold text-center lg:text-left leading-[120%] max-w-[15ch]">
+      <div className="flex flex-col gap-3 lg:gap-[25px] lg:flex-row justify-center items-center px-3 md:px-5 lg:px-0">
+        <h1 className="text-title-md sm:text-lg text-primary-text font-inter font-semibold text-center lg:text-left leading-[120%] max-w-[12ch]">
           The Tokenomics of GeneAlpha
         </h1>
-        <p className="text-secondary-text text-sm sm:text-md text-center lg:text-left leading-[120%] max-w-[40ch]">
-          Model breeding fine-tunes each baseline model according to weighted
-          performance, breeding new, more-accurate models.
+        <p className="text-secondary-text text-sm sm:text-md text-center font-inter font-medium lg:text-left leading-[120%] max-w-[40ch]">
+          Transparent, practical tokenomics fueling steady growth, exposure, and
+          the evolution of Web3's premier prediction engine.
         </p>
       </div>
 
