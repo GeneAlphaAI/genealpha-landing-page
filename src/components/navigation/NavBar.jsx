@@ -7,7 +7,7 @@ const navLinks = [
   { name: "Genetic Algorithm", href: "#product", type: "local" },
   { name: "Model Breeding", href: "#breeding", type: "local" },
   { name: "Hive", href: "#hive", type: "local" },
-  { name: "GA Token", href: "/token", type: "local" },
+  { name: "GA Token", href: "/token", type: "route" }, // changed type here
   { name: "Github", href: "#github", type: "local" },
   { name: "Community", href: "https://github.com/yourrepo", type: "external" },
   { name: "Docs", href: "https://github.com/yourrepo", type: "external" },
@@ -49,6 +49,22 @@ const NavBar = ({ isDrawerOpen, onHamburgerClick, onCloseDrawer }) => {
                   key={name}
                   className={linkClass}
                   onClick={() => handleLocalLinkClick(href)}
+                >
+                  {name}
+                </button>
+              );
+            }
+
+            if (type === "route") {
+              return (
+                <button
+                  key={name}
+                  className={linkClass}
+                  onClick={() => {
+                    navigate(href);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    onCloseDrawer?.();
+                  }}
                 >
                   {name}
                 </button>

@@ -5,7 +5,7 @@ const navLinks = [
   { name: "Genetic Algorithm", href: "#product", type: "local" },
   { name: "Model Breeding", href: "#breeding", type: "local" },
   { name: "Hive", href: "#hive", type: "local" },
-  { name: "GA Token", href: "/token", type: "local" },
+  { name: "GA Token", href: "/token", type: "route" }, // changed to "route"
   { name: "Github", href: "#github", type: "local" },
   { name: "Community", href: "https://github.com/yourrepo", type: "external" },
   { name: "Docs", href: "https://github.com/yourrepo", type: "external" },
@@ -17,16 +17,15 @@ const MobileSidebar = ({ isOpen, onClose }) => {
 
   const handleLinkClick = (href, type) => {
     if (type === "local") {
-      if (href.startsWith("#")) {
-        if (location.pathname !== "/") {
-          navigate("/", { state: { scrollTo: href } });
-        } else {
-          const element = document.querySelector(href);
-          if (element) element.scrollIntoView({ behavior: "smooth" });
-        }
+      if (location.pathname !== "/") {
+        navigate("/", { state: { scrollTo: href } });
       } else {
-        navigate(href);
+        const element = document.querySelector(href);
+        if (element) element.scrollIntoView({ behavior: "smooth" });
       }
+    } else if (type === "route") {
+      navigate(href);
+      window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
       window.open(href, "_blank");
     }
