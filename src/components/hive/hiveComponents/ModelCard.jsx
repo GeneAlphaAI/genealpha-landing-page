@@ -43,7 +43,7 @@ const ModelCard = ({ title, description, badge }) => {
     setStartTime(Date.now());
   };
   const width = window.innerWidth;
-  console.log(width);
+
   return (
     <div className="bg-white/2 border-1 space-y-3 border-stroke-gray mt-3 md:w-[500px] 2xl:min-w-[450px] min-w-[350px] 2xl:max-w-[450px] w-full h-[350px] rounded-[10px] px-6 py-4 flex flex-col justify-between">
       <div className="space-y-2">
