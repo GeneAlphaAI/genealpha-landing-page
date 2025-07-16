@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 const Footer = () => {
   const socialLinks = [
     {
@@ -180,15 +181,23 @@ const Footer = () => {
             <span className="text-[#B2B2B2] mr-2">All systems operational</span>
           </div>
           <div className="flex gap-6 text-dark-gray">
-            <a href="/privacy" className="hover:text-dull-white delay-50">
+            <Link
+              to={"/privacy"}
+              href="/privacy"
+              className="hover:text-dull-white delay-50"
+            >
               Privacy Policy
-            </a>
-            <a href="/cookies" className="hover:text-dull-white delay-50">
+            </Link>
+            <Link
+              to={"/cookies"}
+              href="/cookies"
+              className="hover:text-dull-white delay-50"
+            >
               Cookie Policy
-            </a>
-            <a href="/terms" className="hover:text-dull-white delay-50">
+            </Link>
+            <Link to={"/terms"} className="hover:text-dull-white delay-50">
               Terms of Service
-            </a>
+            </Link>
           </div>
 
           <span className="text-dark-gray pb-5">
