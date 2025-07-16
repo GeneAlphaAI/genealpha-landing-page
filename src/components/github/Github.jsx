@@ -69,7 +69,6 @@ const Github = () => {
           <PrimaryButton
             defaultPadding="px-10 py-2 z-1"
             onClick={() => {
-              console.log("clicked");
               window.open("https://github.com/GeneAlphaAI", "_blank");
             }}
           >
