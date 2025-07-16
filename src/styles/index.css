@@ -30,6 +30,78 @@ body {
   --color-dull-gray: #686870;
   --color-low-opacity-text: #97979c;
   --color-stroke-15: #353536;
+  --animate-enterFromLeft: enterFromLeft 300ms ease forwards;
+  --animate-enterFromRight: enterFromRight 300ms ease forwards;
+  --animate-exitToLeft: exitToLeft 300ms ease forwards;
+  --animate-exitToRight: exitToRight 300ms ease forwards;
+  --animate-scaleIn: scaleIn 200ms ease forwards;
+  --animate-scaleOut: scaleOut 200ms ease forwards;
+
+  @keyframes enterFromLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-200px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes enterFromRight {
+    0% {
+      opacity: 0;
+      transform: translateX(200px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes exitToLeft {
+    0% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(-200px);
+    }
+  }
+
+  @keyframes exitToRight {
+    0% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(200px);
+    }
+  }
+
+  @keyframes scaleIn {
+    0% {
+      opacity: 0;
+      transform: rotateX(-30deg) scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: rotateX(0deg) scale(1);
+    }
+  }
+
+  @keyframes scaleOut {
+    0% {
+      opacity: 1;
+      transform: rotateX(0deg) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: rotateX(-10deg) scale(0.95);
+    }
+  }
 }
 
 /* styles.css or a module file */

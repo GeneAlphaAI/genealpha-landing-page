@@ -12,7 +12,7 @@ const sentence = [
   {
     type: "text",
     value:
-      "lpha is building the first Web3 prediction model that evolves itself using Genetic Algorithms",
+      "lpha is building the first Web3 prediction infrastructure that evolves using Genetic Algorithms",
   },
 ];
 

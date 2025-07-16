@@ -10,7 +10,7 @@ const ModelBreeding = () => {
     >
       <div className="flex flex-col gap-4 lg:gap-0 lg:flex-row justify-center items-center">
         <h1 className="text-title-md sm:text-lg  text-primary-text font-semibold text-center leading-[120%] max-w-[15ch]">
-          Set the breeding ground for Alpha
+          The infrastructure for breeding Alpha
         </h1>
         <p className="text-secondary-text text-sm sm:text-md text-center lg:text-left leading-[120%] max-w-[40ch]">
           Model breeding fine-tunes each baseline model according to weighted

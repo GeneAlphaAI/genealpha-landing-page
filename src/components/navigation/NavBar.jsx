@@ -2,6 +2,8 @@ import React from "react";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import PrimaryButton from "../buttons/PrimaryButton";
 import AnimatedLogo from "../animations/AnimatedLogo";
+import NavMenu from "./NavMenu";
+import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 
 const navLinks = [
   { name: "Genetic Algorithm", href: "#product", type: "local" },
@@ -9,8 +11,67 @@ const navLinks = [
   { name: "Hive", href: "#hive", type: "local" },
   { name: "GA Token", href: "/token", type: "route" }, // changed type here
   { name: "Github", href: "#github", type: "local" },
-  { name: "Community", href: "https://github.com/yourrepo", type: "external" },
-  { name: "Docs", href: "https://github.com/yourrepo", type: "external" },
+];
+const menus = [
+  {
+    name: "Community",
+    type: "menu",
+    items: [
+      {
+        name: "Join our Telegram",
+        href: "https://t.me/yourgroup",
+        description:
+          "Join our vibrant community to share ideas, have fun, and chat about Web3.",
+        icon: "/assets/footer/Telegram.svg",
+      },
+      {
+        name: "Follow us on X",
+        href: "https://twitter.com/yourhandle",
+        description:
+          "Follow us on X for the latest updates on GeneAlpha and its development.",
+        icon: "/assets/footer/X.svg",
+      },
+
+      {
+        name: "Sneak into our Github",
+        href: "https://twitter.com/yourhandle",
+        description:
+          "Explore our open-source codebase and help advance the GeneAlpha ecosystem.",
+        icon: "/assets/footer/Github.svg",
+      },
+      {
+        name: "Join Discord",
+        href: "https://discord.gg/yourinvite",
+        description:
+          "Our Discord is geared toward developers and machine learning enthusiasts.",
+        icon: "/assets/footer/Telegram.svg",
+        disabled: true,
+        badge: "Soon",
+      },
+    ],
+  },
+  {
+    name: "Docs",
+    type: "menu",
+    items: [
+      {
+        name: "Whitepaper",
+        href: "https://yourdomain.com/whitepaper",
+        description:
+          "Created for technical contributors who wish to join hands and scale with us.",
+        icon: "/assets/menu/Whitepaper.svg",
+      },
+      {
+        name: "Yellow Paper",
+        href: "https://yourdomain.com/devguide",
+        disabled: true,
+        description:
+          "Created for technical contributors who wish to join hands and scale with us.",
+        icon: "/assets/menu/YellowPaper.svg",
+        badge: "Soon",
+      },
+    ],
+  },
 ];
 
 const NavBar = ({ isDrawerOpen, onHamburgerClick, onCloseDrawer }) => {
@@ -32,59 +93,50 @@ const NavBar = ({ isDrawerOpen, onHamburgerClick, onCloseDrawer }) => {
   };
 
   return (
-    <div className="sticky top-0 z-50 bg-primary/30 flex items-center justify-center backdrop-blur-lg border-b-[0.5px] border-white/10 px-5 p-4 w-full">
-      <div className="flex flex-row max-w-6xl items-center space-x-6 w-full relative justify-between gap-12">
+    <div className="sticky top-0 z-50 bg-primary/30 backdrop-blur-lg border-b border-white/10 px-5 py-4 w-full">
+      <div className="flex max-w-6xl mx-auto items-center justify-between w-full">
+        {/* Logo */}
         <Link to={"/"} className="scale-[1.1]">
           <AnimatedLogo />
         </Link>
 
-        <div className="hidden 1xl:flex gap-13">
-          {navLinks.map(({ name, href, type }) => {
-            const linkClass =
-              "text-inactive-text hover:text-dull-white delay-50 cursor-pointer transition-color text-xs font-semibold";
+        {/* Links + NavMenu */}
+        <div className="hidden 1xl:flex items-start gap-6 relative">
+          <NavigationMenu.Root className="relative flex">
+            <NavigationMenu.List className="flex items-center gap-2 relative">
+              {/* Static Links */}
+              {navLinks.map(({ name, href, type }) => (
+                <NavigationMenu.Item key={name}>
+                  <NavigationMenu.Link asChild>
+                    {type === "local" ? (
+                      <button
+                        className="text-inactive-text px-6 hover:text-dull-white py-2 text-xs font-semibold"
+                        onClick={() => handleLocalLinkClick(href)}
+                      >
+                        {name}
+                      </button>
+                    ) : (
+                      <Link
+                        to={href}
+                        className="text-inactive-text px-6 hover:text-dull-white py-2 text-xs font-semibold"
+                      >
+                        {name}
+                      </Link>
+                    )}
+                  </NavigationMenu.Link>
+                </NavigationMenu.Item>
+              ))}
 
-            if (type === "local") {
-              return (
-                <button
-                  key={name}
-                  className={linkClass}
-                  onClick={() => handleLocalLinkClick(href)}
-                >
-                  {name}
-                </button>
-              );
-            }
+              {/* Dropdown Menus */}
+              <NavMenu menus={menus} />
+            </NavigationMenu.List>
 
-            if (type === "route") {
-              return (
-                <button
-                  key={name}
-                  className={linkClass}
-                  onClick={() => {
-                    navigate(href);
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                    onCloseDrawer?.();
-                  }}
-                >
-                  {name}
-                </button>
-              );
-            }
-
-            return (
-              <a
-                key={name}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={linkClass}
-              >
-                {name}
-              </a>
-            );
-          })}
+            {/* Viewport */}
+            <NavigationMenu.Viewport className="absolute top-full -right-30 z-50 rounded-[10px] border border-stroke-gray bg-[#0F1010] shadow-lg h-[var(--radix-navigation-menu-viewport-height)] w-[var(--radix-navigation-menu-viewport-width)] origin-[top_center] transition-[width,height] duration-300 data-[state=open]:animate-scaleIn data-[state=closed]:animate-scaleOut" />
+          </NavigationMenu.Root>
         </div>
 
+        {/* CTA + Hamburger */}
         <div className="flex items-center gap-4">
           <PrimaryButton textSize="text-sm">Launch Hive</PrimaryButton>
 
