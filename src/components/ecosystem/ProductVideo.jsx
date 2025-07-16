@@ -22,10 +22,10 @@ const ProductVideo = () => {
           {isPlaying ? (
             <iframe
               className="w-full h-full"
-              src="https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1&rel=0"
+              src="https://player.vimeo.com/video/1101794316?autoplay=1&muted=0&title=0&byline=0&portrait=0"
               title="GeneAlpha Product Video"
               frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
               allowFullScreen
             ></iframe>
           ) : (
