@@ -35,7 +35,7 @@ function Tokenomics() {
     },
     {
       title: "RESERVE",
-      value: 1000000,
+      value: 2000000,
       description: "TO HELP SUSTAIN THE ECOSYSTEM DURING UNFORESEEN EVENTS.",
       highlight: false
     },

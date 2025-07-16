@@ -100,7 +100,7 @@ By using GeneAlpha, the Site, or any related Services, you acknowledge that you 
 `;
 
 const Terms = () => (
-  <div className="w-full flex justify-center">
+  <div className="w-full flex justify-center px-4 xl:px-0">
     <div className="max-w-4xl">
       <h1 className="text-lg my-2 font-bold text-dull-white mt-8">
         Terms of Services

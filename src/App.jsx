@@ -6,6 +6,7 @@ import Landing from "./pages/Landing";
 import Token from "./pages/Token";
 import MobileSidebar from "./components/navigation/MobileSidebar";
 import Terms from "./pages/Terms";
+import Cookies from "./pages/Cookies";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -57,6 +58,7 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/token" element={<Token />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/cookies" element={<Cookies />} />
           <Route path="*" element={<Navigate to={"/"} />} />
         </Routes>
       </div>
