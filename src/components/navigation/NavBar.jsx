@@ -138,7 +138,12 @@ const NavBar = ({ isDrawerOpen, onHamburgerClick, onCloseDrawer }) => {
 
         {/* CTA + Hamburger */}
         <div className="flex items-center gap-4">
-          <PrimaryButton textSize="text-sm">
+          <PrimaryButton
+            onClick={() => {
+              window.open("https://hive.genealpha.ai/", "_blank");
+            }}
+            textSize="text-sm"
+          >
             <div className="flex items-center gap-2">
               <img src="/assets/brand/HiveBlack.svg" />
               <h3>Launch Hive</h3>
