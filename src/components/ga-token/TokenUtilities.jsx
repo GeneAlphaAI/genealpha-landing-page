@@ -25,18 +25,18 @@ const TokenUtilities = () => {
       icon: "/assets/token-utilities/alpha.svg",
       title: "Get your hands on the Alpha",
       description:
-        "Observe crossover and mutation cycles in real time, vote on tweaks, and watch fresh offspring emerge to challenge existing champions.",
+        "Claim priority access to the reigning Alpha model, deploy its signals before anyone else, and stay ahead with continual upgrades.",
     },
   ];
   return (
     <div className="w-full px-4 pt-[200px] pb-[150px] flex flex-col gap-[80px] justify-center items-center">
       <div className="w-full flex flex-col justify-center items-center space-y-2">
         <h1 className="text-md text-dull-white font-medium text-center leading-[120%] font-inter">
-          Explore important utilities that comes with the $GA token
+          Explore key utilities that come with the $GA token
         </h1>
         <p className="text-low-opacity-text text-sm text-center max-w-[50ch] font-inter font-medium">
-          The outlined utilities are only tip of the icerberg, GeneAlpha is
-          committed to increase perks and value of its token overtime.
+          These utilities are just the tip of the iceberg, GeneAlpha will keep
+          adding perks and boosting token value over time.
         </p>
       </div>
 
