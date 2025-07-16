@@ -93,7 +93,7 @@ These Terms, together with any additional policies referenced herein, constitute
 
 GeneAlpha AI  
 Site: [genealpha.ai](https://genealpha.ai)  
-Email: hello@genealpha.ai  
+Email: [hello@genealpha.ai](mailto:hello@genealpha.ai) 
 
 By using GeneAlpha, the Site, or any related Services, you acknowledge that you have read, understood, and agreed to these Terms of Service.
 
@@ -105,7 +105,7 @@ const Terms = () => (
       <h1 className="text-lg my-2 font-bold text-dull-white mt-8">
         Terms of Services
       </h1>
-      <span className="text-sm text-[#BABABD]">Date updated: 23/06/2025</span>
+      <span className="text-sm text-[#BABABD]">Date updated: 16/07/2025</span>
       <p className="text-[14px] text-[#BABABD] mb-4 mt-10">
         These Terms of Service apply whenever you interact with GeneAlpha in any
         way—whether you are merely browsing genealpha.ai, connecting a

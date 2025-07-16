@@ -63,7 +63,7 @@ const Privacy = () => (
       <h1 className="text-lg my-2 font-bold text-dull-white mt-8">
         Privacy Policy
       </h1>
-      <span className="text-sm text-[#BABABD]">Date updated: 23/06/2025</span>
+      <span className="text-sm text-[#BABABD]">Date updated: 16/07/2025</span>
       <ReactMarkdown
         components={{
           h2: ({ children, ...props }) => (
