@@ -7,8 +7,24 @@ const navLinks = [
   { name: "Hive", href: "#hive", type: "local" },
   { name: "GA Token", href: "/token", type: "route" }, // changed to "route"
   { name: "Github", href: "#github", type: "local" },
-  { name: "Community", href: "https://github.com/yourrepo", type: "external" },
-  { name: "Docs", href: "https://github.com/yourrepo", type: "external" },
+  {
+    name: "Whitepaper",
+    href: "https://whitepaper.genealpha.ai",
+    type: "external",
+  },
+];
+
+const socialLinks = [
+  {
+    name: "Telegram",
+    href: "https://t.me/yourgroup",
+    icon: "/assets/footer/Telegram.svg",
+  },
+  {
+    name: "X (Twitter)",
+    href: "https://twitter.com/yourhandle",
+    icon: "/assets/footer/X.svg",
+  },
 ];
 
 const MobileSidebar = ({ isOpen, onClose }) => {
@@ -39,22 +55,32 @@ const MobileSidebar = ({ isOpen, onClose }) => {
       } 1xl:hidden`}
     >
       <div className="flex flex-col gap-2">
-        {navLinks.map(({ name, href, type }) => {
-          const isActive = location.pathname === href;
-          const linkClass = `px-3 py-2 rounded-lg cursor-pointer transition text-sm ${
-            isActive ? "bg-white/10 text-white" : "text-dull-white"
-          }`;
+        {navLinks.map(({ name, href, type }) => (
+          <button
+            key={name}
+            className="px-3 py-2 rounded-lg text-left cursor-pointer transition text-sm text-dull-white hover:bg-white/10"
+            onClick={() => handleLinkClick(href, type)}
+          >
+            {name}
+          </button>
+        ))}
+      </div>
 
-          return (
-            <button
-              key={name}
-              className={linkClass + " text-left"}
-              onClick={() => handleLinkClick(href, type)}
-            >
-              {name}
-            </button>
-          );
-        })}
+      <div className="border-t border-white/10 mt-4 pt-4 flex flex-col gap-2">
+        <h3 className="text-sm text-inactive-text px-3 font-medium">Social</h3>
+        {socialLinks.map(({ name, href, icon }) => (
+          <a
+            key={name}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-3 py-2 rounded-lg text-left cursor-pointer transition text-sm text-dull-white hover:bg-white/10"
+            onClick={onClose}
+          >
+            <img src={icon} alt={name} className="w-4 h-4 opacity-80" />
+            {name}
+          </a>
+        ))}
       </div>
     </div>
   );

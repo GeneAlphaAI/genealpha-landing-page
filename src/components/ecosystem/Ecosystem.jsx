@@ -66,11 +66,11 @@ const techItems = [
       "MLflow manages the entire machine learning lifecycle: tracking experiments, packaging code, and deploying models seamlessly.",
   },
   {
-    name: "React",
-    src: "/assets/ecosystem/Python.svg",
-    altSrc: "/assets/ecosystem/Python-alt.svg",
+    name: "AWS",
+    src: "/assets/ecosystem/AWS.svg",
+    altSrc: "/assets/ecosystem/AWS-alt.svg",
     description:
-      "React is a JavaScript library for creating dynamic user interfaces, making web apps fast, interactive, and component-based.",
+      "AWS powers our backend infrastructure, providing scalable compute, storage, and cloud services essential for training models, hosting APIs, and delivering reliable performance to the GeneAlpha ecosystem.",
   },
 ];
 

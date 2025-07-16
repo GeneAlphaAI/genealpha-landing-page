@@ -16,7 +16,8 @@ const sentence = [
   },
 ];
 
-const smallHeadline = "The Prediction Model That Evolves Itself";
+const smallHeadline =
+  "Genetic algorithm based infrastructure for Web3 predictions";
 
 const AnimatedHeadline = () => {
   return (
