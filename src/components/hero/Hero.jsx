@@ -22,12 +22,22 @@ const Hero = () => {
           variants={wordFadeIn(2, 1)}
           initial="hidden"
           animate="show"
-          className="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-10"
+          className="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-5 sm:gap-10"
         >
-          <PrimaryButton defaultPadding="px-10 py-2">
+          <PrimaryButton
+            onClick={() => {
+              window.open("https://hive.genealpha.ai", "_blank");
+            }}
+            defaultPadding="px-10 py-2"
+          >
             Get Involved
           </PrimaryButton>
-          <button className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+          <button
+            onClick={() => {
+              window.open("https://whitepaper.genealpha.ai", "_blank");
+            }}
+            className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity"
+          >
             <p>Read Docs</p>
             <img
               src="/assets/hero/RightArrow.svg"
@@ -47,7 +57,7 @@ const Hero = () => {
         animate="show"
         src="/assets/hero/DAppSkew.webp"
         alt="Right Arrow - Docs"
-        className="absolute top-100 md:top-70 transform translate-x-[380px] sm:translate-x-[200px] w-full max-w-[2420px] min-w-[1200px] z-[1]"
+        className="absolute top-120 md:top-70 transform translate-x-[380px] sm:translate-x-[200px] w-full max-w-[2420px] min-w-[1200px] z-[1]"
       />
       <div className="absolute bottom-0 left-0 right-0 h-100 z-[3]  pointer-events-none bg-gradient-to-t from-primary to-transparent"></div>
       <div className="hidden sm:absolute top-0 right-0 h-full w-150 z-[3] pointer-events-none bg-gradient-to-l from-primary to-transparent"></div>

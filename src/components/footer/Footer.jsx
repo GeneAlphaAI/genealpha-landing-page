@@ -5,37 +5,37 @@ const Footer = () => {
   const socialLinks = [
     {
       icon: "/assets/footer/Telegram.svg",
-      href: "https://discord.gg/yourserver",
+      href: "https://t.me/GeneAlphaAI",
     },
     {
       icon: "/assets/footer/X.svg",
-      href: "https://twitter.com/yourprofile",
+      href: "https://x.com/GeneAlphaAI",
     },
     {
       icon: "/assets/footer/Github.svg",
-      href: "https://github.com/yourrepo",
+      href: "https://github.com/GeneAlphaAI",
     },
   ];
 
   const sitemapLinks = [
     { name: "Home", href: "/" },
-    { name: "GA Token", href: "/explore" },
-    { name: "Genetic Algorithm", href: "/launch" },
-    { name: "Model Breeding", href: "/dashboard" },
+    { name: "GA Token", href: "/token" },
+    { name: "Genetic Algorithm", href: "#product" },
+    { name: "Model Breeding", href: "#breeding" },
   ];
 
   const resourceLinks = [
-    { name: "Hive", href: "/docs" },
-    { name: "Github", href: "https://github.com/yourrepo" },
-    { name: "Whitepaper", href: "/community" },
-    { name: "FAQ", href: "/community" },
+    { name: "Hive", href: "https://hive.genealpha.ai/" },
+    { name: "Github", href: "https://github.com/GeneAlphaAI" },
+    { name: "Whitepaper", href: "https://whitepaper.genealpha.ai" },
+    // { name: "FAQ", href: "/community" },
   ];
 
   const connectLinks = [
-    { name: "Contact us", href: "https://t.me/yourchannel" },
-    { name: "Telegram", href: "https://twitter.com/yourprofile" },
-    { name: "X (Twitter)", href: "https://twitter.com/yourprofile" },
-    { name: "Github", href: "https://discord.gg/yourserver" },
+    // { name: "Contact us", href: "https://t.me/yourchannel" },
+    { name: "Telegram", href: "https://t.me/GeneAlphaAI" },
+    { name: "X (Twitter)", href: "https://x.com/GeneAlphaAI" },
+    { name: "Github", href: "https://github.com/GeneAlphaAI" },
   ];
 
   return (

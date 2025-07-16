@@ -5,7 +5,7 @@ const NavMenu = ({ menus }) => {
     <>
       {menus.map(({ name, items }) => (
         <NavigationMenu.Item key={name}>
-          <NavigationMenu.Trigger className="text-inactive-text px-6 py-2 hover:text-dull-white text-xs font-semibold">
+          <NavigationMenu.Trigger className="text-inactive-text px-6 py-2 cursor-pointer hover:text-dull-white text-xs font-semibold">
             {name}
           </NavigationMenu.Trigger>
 

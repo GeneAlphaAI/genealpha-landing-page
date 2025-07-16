@@ -19,14 +19,14 @@ const menus = [
     items: [
       {
         name: "Join our Telegram",
-        href: "https://t.me/yourgroup",
+        href: "https://t.me/GeneAlphaAI",
         description:
           "Join our vibrant community to share ideas, have fun, and chat about Web3.",
         icon: "/assets/footer/Telegram.svg",
       },
       {
         name: "Follow us on X",
-        href: "https://twitter.com/yourhandle",
+        href: "https://x.com/GeneAlphaAI",
         description:
           "Follow us on X for the latest updates on GeneAlpha and its development.",
         icon: "/assets/footer/X.svg",
@@ -34,7 +34,7 @@ const menus = [
 
       {
         name: "Sneak into our Github",
-        href: "https://twitter.com/yourhandle",
+        href: "https://github.com/GeneAlphaAI",
         description:
           "Explore our open-source codebase and help advance the GeneAlpha ecosystem.",
         icon: "/assets/footer/Github.svg",
@@ -56,7 +56,7 @@ const menus = [
     items: [
       {
         name: "Whitepaper",
-        href: "https://yourdomain.com/whitepaper",
+        href: "https://whitepaper.genealpha.ai",
         description:
           "Created for technical contributors who wish to join hands and scale with us.",
         icon: "/assets/menu/Whitepaper.svg",
@@ -110,7 +110,7 @@ const NavBar = ({ isDrawerOpen, onHamburgerClick, onCloseDrawer }) => {
                   <NavigationMenu.Link asChild>
                     {type === "local" ? (
                       <button
-                        className="text-inactive-text px-6 hover:text-dull-white py-2 text-xs font-semibold"
+                        className="text-inactive-text px-6 hover:text-dull-white cursor-pointer py-2 text-xs font-semibold"
                         onClick={() => handleLocalLinkClick(href)}
                       >
                         {name}
@@ -118,7 +118,7 @@ const NavBar = ({ isDrawerOpen, onHamburgerClick, onCloseDrawer }) => {
                     ) : (
                       <Link
                         to={href}
-                        className="text-inactive-text px-6 hover:text-dull-white py-2 text-xs font-semibold"
+                        className="text-inactive-text px-6 hover:text-dull-white cursor-pointer py-2 text-xs font-semibold"
                       >
                         {name}
                       </Link>
@@ -138,7 +138,12 @@ const NavBar = ({ isDrawerOpen, onHamburgerClick, onCloseDrawer }) => {
 
         {/* CTA + Hamburger */}
         <div className="flex items-center gap-4">
-          <PrimaryButton textSize="text-sm">Launch Hive</PrimaryButton>
+          <PrimaryButton textSize="text-sm">
+            <div className="flex items-center gap-2">
+              <img src="/assets/brand/HiveBlack.svg" />
+              <h3>Launch Hive</h3>
+            </div>
+          </PrimaryButton>
 
           <button
             onClick={isDrawerOpen ? onCloseDrawer : onHamburgerClick}
