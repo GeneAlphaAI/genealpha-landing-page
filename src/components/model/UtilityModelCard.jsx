@@ -30,7 +30,7 @@ const UtilityModelCard = ({
 }) => {
   return (
     <div
-      className={` ${className} group relative border border-stroke-gray overflow-hidden ${
+      className={` ${className} group relative cursor-pointer border border-stroke-gray overflow-hidden ${
         type === 2
           ? "bg-transparent"
           : "bg-white/5 shadow-[inset_0_0_48px_0px_rgba(255,255,255,0.04)]"
@@ -76,7 +76,7 @@ const UtilityModelCard = ({
         {hoverDescription}
       </p>
       {type === 2 && title && title.includes("CONTRACT") && (
-        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+        <div className="opacity-0 group-hover:opacity-100 cursor-pointer transition-opacity duration-300 ease-in-out">
           <CopyButton />
         </div>
       )}

@@ -1,6 +1,6 @@
-import React from 'react'
-import ModelCard from '../model/ModelCard'
-import UtilityModelCard from '../model/UtilityModelCard';
+import React from "react";
+import ModelCard from "../model/ModelCard";
+import UtilityModelCard from "../model/UtilityModelCard";
 
 function Tokenomics() {
   const tokenomics = [
@@ -8,36 +8,36 @@ function Tokenomics() {
       title: "TOTAL SUPPLY",
       value: 10000000,
       description: "THE MAXIMUM AMOUNT OF $GA THAT CAN EVER EXIST.",
-      highlight: false
+      highlight: false,
     },
     {
       title: "MARKETING",
       value: 1000000,
       description: "TO CREATE EXPOSURE, AWARENESS AND PARTNERSHIPS.",
-      highlight: false
+      highlight: false,
     },
     {
       title: "$GA CONTRACT",
-      value: "0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe",
-      highlight: true
+      value: "0x5e6dd9a767894470e7e93e603c25f681a5adf1ae",
+      highlight: true,
     },
     {
       title: "TRADE FEE",
       value: "5% | 5%",
       description: "A fee of 5% is applied on buy and sell.",
-      highlight: true
+      highlight: true,
     },
     {
       title: "TREASURY",
       value: 1000000,
       description: "TO HELP ONBOARD AND INCETIVIZE ADVISORY AND TALENT.",
-      highlight: false
+      highlight: false,
     },
     {
       title: "RESERVE",
       value: 2000000,
       description: "TO HELP SUSTAIN THE ECOSYSTEM DURING UNFORESEEN EVENTS.",
-      highlight: false
+      highlight: false,
     },
   ];
   return (
@@ -70,4 +70,4 @@ function Tokenomics() {
   );
 }
 
-export default Tokenomics
+export default Tokenomics;
