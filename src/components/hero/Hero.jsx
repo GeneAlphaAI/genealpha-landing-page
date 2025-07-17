@@ -14,9 +14,8 @@ const Hero = () => {
           animate="show"
           className="text-secondary-text text-center text-md max-w-[55ch]"
         >
-          Model Zoo based prediction system using more than 15 baseline models
-          to breed the strongest prediction model to date using Genetic
-          Algorithms.
+          Model Zoo based prediction system using multiple baseline models to
+          breed the strongest prediction model to date using Genetic Algorithms.
         </motion.p>
         <motion.div
           variants={wordFadeIn(2, 1)}
