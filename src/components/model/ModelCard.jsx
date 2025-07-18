@@ -1,9 +1,10 @@
 import React from "react";
+import SvgAnimator from "../animations/SvgAnimator";
 
 const ModelCard = ({
   title,
   hoverDescription,
-  sideImage,
+  sideImage: SideImage,
   className = "min-w-[174px] min-h-[228px]",
 }) => {
   return (
@@ -26,13 +27,15 @@ const ModelCard = ({
           className=""
         />
       </div>
-      {sideImage && (
-        <div className="absolute bottom-0 w-[60px] md:w-[80px] lg:w-max right-0 p-3 flex z-[10] flex-col justify-center items-center pointer-events-none">
-          <img src={sideImage} alt="Dots" className="" />
+      {SideImage && (
+        <div className="absolute -bottom-2 -right-2 sm:right-0 sm:bottom-0 scale-70  sm:scale-100 w-max p-2 sm:p-3 flex z-[100] flex-col justify-center items-center">
+          <SvgAnimator>
+            <SideImage />
+          </SvgAnimator>
         </div>
       )}
       {title == "ALPHA" && (
-        <div className="absolute top-0 group-hover:opacity-100 opacity-0 transition-opacity ease-in-out right-0 flex z-[5] flex-col justify-center items-center pointer-events-none">
+        <div className="absolute top-0 group-hover:opacity-100 opacity-0 transition-opacity ease-in-out right-0 flex z-[5] flex-col justify-center items-center">
           <img src="/assets/model/BlueGlow.svg" alt="Glow" className="" />
         </div>
       )}

@@ -1,23 +1,29 @@
 import React from "react";
 import ModelCard from "./ModelCard";
 import WideModelCard from "./WideModelCard";
+import {
+  CardFiveDots,
+  CardFourDots,
+  CardThreeDots,
+  WideCardDots,
+} from "./ModelSvg";
 
 const ModelMobile = () => {
   const customCards = [
     {
       title: "OFFSPRING",
-      sideImage: "/assets/model/ModelDots3.svg",
+      sideImage: CardThreeDots,
       description:
         "Tuned descendant model, optimized for higher accuracy than baseline.",
     },
     {
       title: "ALPHA",
-      sideImage: "/assets/model/ModelDots4.svg",
+      sideImage: CardFourDots,
       description: "The crowned champion that bested the rest of the models.",
     },
     {
       title: "OFFSPRING",
-      sideImage: "/assets/model/ModelDots5.svg",
+      sideImage: CardFiveDots,
       description:
         "Tuned descendant model, optimized for higher accuracy than baseline.",
     },
@@ -90,7 +96,7 @@ const ModelMobile = () => {
         <WideModelCard
           title="CROSSOVER & MUTATION"
           background={false}
-          sideImage={"/assets/model/WideModelDots.svg"}
+          sideImage={WideCardDots}
         />
       </div>
       <div className="relative w-[320px] xs:w-[424px] h-[37px] z-0">

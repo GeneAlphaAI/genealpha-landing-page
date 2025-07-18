@@ -1,35 +1,43 @@
 import React from "react";
 import ModelCard from "./ModelCard";
 import WideModelCard from "./WideModelCard";
+import {
+  CardFiveDots,
+  CardFourDots,
+  CardOneDots,
+  CardThreeDots,
+  CardTwoDots,
+  WideCardDots,
+} from "./ModelSvg";
 
 const ModelDesktop = () => {
   const customCards = [
     {
       title: "OFFSPRING",
-      sideImage: "/assets/model/ModelDots1.svg",
+      sideImage: CardOneDots,
       description:
         "Tuned descendant model, optimized for higher accuracy than baseline.",
     },
     {
       title: "OFFSPRING",
-      sideImage: "/assets/model/ModelDots2.svg",
+      sideImage: CardTwoDots,
       description:
         "Tuned descendant model, optimized for higher accuracy than baseline.",
     },
     {
       title: "OFFSPRING",
-      sideImage: "/assets/model/ModelDots3.svg",
+      sideImage: CardThreeDots,
       description:
         "Tuned descendant model, optimized for higher accuracy than baseline.",
     },
     {
       title: "ALPHA",
-      sideImage: "/assets/model/ModelDots4.svg",
+      sideImage: CardFourDots,
       description: "The crowned champion that bested the rest of the models.",
     },
     {
       title: "OFFSPRING",
-      sideImage: "/assets/model/ModelDots5.svg",
+      sideImage: CardFiveDots,
       description:
         "Tuned descendant model, optimized for higher accuracy than baseline.",
     },
@@ -109,7 +117,7 @@ const ModelDesktop = () => {
         <WideModelCard
           title="CROSSOVER & MUTATION"
           background={false}
-          sideImage={"/assets/model/WideModelDots.svg"}
+          sideImage={WideCardDots}
           hoverDescription={
             "Genetic-style operations that blend top performers and inject targeted tweaks—generating fresh model variants primed to outperform their parents."
           }

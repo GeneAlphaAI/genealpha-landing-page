@@ -1,8 +1,9 @@
 import React from "react";
+import SvgAnimator from "../animations/SvgAnimator";
 
 const WideModelCard = ({
   title,
-  sideImage,
+  sideImage: SideImage,
   hoverDescription,
   background = true,
 }) => {
@@ -33,9 +34,11 @@ const WideModelCard = ({
           className=""
         />
       </div>
-      {sideImage && (
-        <div className="absolute bottom-0 w-[180px] lg:w-max right-0 p-3 flex z-[10] flex-col justify-center items-center pointer-events-none">
-          <img src={sideImage} alt="Dots" className="" />
+      {SideImage && (
+        <div className="absolute -right-5 sm:right-0 bottom-0 scale-70 sm:scale-100 w-max p-2 sm:p-3 flex z-[100] flex-col justify-center items-center">
+          <SvgAnimator>
+            <SideImage />
+          </SvgAnimator>
         </div>
       )}
     </div>
