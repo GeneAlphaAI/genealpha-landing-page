@@ -8,6 +8,7 @@ import MobileSidebar from "./components/navigation/MobileSidebar";
 import Terms from "./pages/Terms";
 import Cookies from "./pages/Cookies";
 import Privacy from "./pages/Privacy";
+import Roadmap from "./pages/Roadmap";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -61,6 +62,7 @@ function App() {
           <Route path="/terms" element={<Terms />} />
           <Route path="/cookies" element={<Cookies />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/roadmap" element={<Roadmap />} />
           <Route path="*" element={<Navigate to={"/"} />} />
         </Routes>
       </div>

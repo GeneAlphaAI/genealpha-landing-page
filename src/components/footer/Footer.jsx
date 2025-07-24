@@ -28,7 +28,7 @@ const Footer = () => {
     { name: "Hive", href: "https://hive.genealpha.ai/" },
     { name: "Github", href: "https://github.com/GeneAlphaAI" },
     { name: "Whitepaper", href: "https://whitepaper.genealpha.ai" },
-    // { name: "FAQ", href: "/community" },
+    { name: "Roadmap", href: "/roadmap" },
   ];
 
   const connectLinks = [

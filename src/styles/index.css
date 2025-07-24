@@ -30,6 +30,7 @@ body {
   --color-dull-gray: #686870;
   --color-low-opacity-text: #97979c;
   --color-stroke-15: #353536;
+  --color-medium-opacity: #bababd;
   --animate-enterFromLeft: enterFromLeft 300ms ease forwards;
   --animate-enterFromRight: enterFromRight 300ms ease forwards;
   --animate-exitToLeft: exitToLeft 300ms ease forwards;
