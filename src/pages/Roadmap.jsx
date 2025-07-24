@@ -4,15 +4,16 @@ import IncentivePhase from "../components/roadmap/IncentivePhase";
 import AdoptionPhase from "../components/roadmap/AdoptionPhase";
 import IgnitionPhase from "../components/roadmap/IgnitionPhase";
 import AccuracyPhase from "../components/roadmap/AccuracyPhase";
+import ComingSoon from "../components/roadmap/ComingSoon";
 
 const Roadmap = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   const tabs = [
     { label: "Ignition Phase", component: <IgnitionPhase /> },
-    { label: "Accuracy Phase", component: <AccuracyPhase /> },
-    { label: "Incentives Phase", component: <IncentivePhase /> },
-    { label: "Adoption Phase", component: <AdoptionPhase /> },
+    { label: "Accuracy Phase", component: <ComingSoon /> },
+    { label: "Incentives Phase", component: <ComingSoon /> },
+    { label: "Adoption Phase", component: <ComingSoon /> },
   ];
 
   const handlePrev = () => {
