@@ -11,7 +11,7 @@ const Roadmap = () => {
   const tabs = [
     { label: "Ignition Phase", component: <IgnitionPhase /> },
     { label: "Accuracy Phase", component: <AccuracyPhase /> },
-    { label: "Incentive Phase", component: <IncentivePhase /> },
+    { label: "Incentives Phase", component: <IncentivePhase /> },
     { label: "Adoption Phase", component: <AdoptionPhase /> },
   ];
 
