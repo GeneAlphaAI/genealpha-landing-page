@@ -18,7 +18,7 @@ const phaseItems = [
     title: "Model training pipeline",
     description:
       "Build a no-code training pipeline for both the GeneAlpha community and our in-house team, and assemble the initial datasets to power it.",
-    progress: 60,
+    progress: 90,
     status: "CREATING MODEL-SPECIFIC DATASETS",
   },
   {
