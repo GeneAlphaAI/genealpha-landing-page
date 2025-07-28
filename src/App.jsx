@@ -40,21 +40,21 @@ function App() {
         isOpen={isDrawerOpen}
         onClose={() => handleCloseDrawer()}
       />
-      {/* <img
+      <img
         src="/assets/gradients/MiddleGlow.svg"
-        className="w-full h-[150dvh] absolute top-[1500px] right-20 z-0 opacity-40 "
+        className="w-full h-[150dvh] absolute top-[1500px] right-20 z-0 opacity-90 "
         loading="lazy"
       />
       <img
         src="/assets/gradients/MiddleGlow.svg"
-        className="w-full h-full absolute top-[3500px] -right-300 z-0 opacity-40 "
+        className="w-full h-full hidden absolute top-[3500px] -right-300 z-0 opacity-90 "
         loading="lazy"
       />
       <img
         src="/assets/gradients/HiveGlow.svg"
-        className="w-full h-[150dvh] absolute top-[4000px] -right-100 z-0 opacity-40 "
+        className="w-full h-[150dvh] hidden md:block absolute top-[4000px] -right-100 z-0 opacity-90 "
         loading="lazy"
-      /> */}
+      />
       <div className=" z-1">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Landing />} />
