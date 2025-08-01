@@ -25,7 +25,7 @@ const phaseItems = [
     title: "Genetic algorithm injection",
     description:
       "Choose a compatible genetic algorithm and integrate it into a few hand-picked models to prove the pipeline works.",
-    progress: 10,
+    progress: 100,
     status: "ALGORITHM SELECTION AND PLANNING",
   },
 ];
