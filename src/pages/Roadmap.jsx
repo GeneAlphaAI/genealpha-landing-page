@@ -28,7 +28,7 @@ const Roadmap = () => {
     <div className="w-full flex flex-col items-center justify-center py-5 pt-20 px-5 relative">
       <img
         src="/assets/gradients/RoadmapGlow.svg"
-        className="w-full h-full absolute -top-[60] right-0 z-0 opacity-70 "
+        className="w-full h-full absolute top-[0] right-0 z-0 opacity-70 "
         loading="lazy"
       />
       <div className="w-full flex flex-col justify-center items-center space-y-4 z-10">

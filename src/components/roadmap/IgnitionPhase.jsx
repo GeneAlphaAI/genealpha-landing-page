@@ -28,6 +28,13 @@ const phaseItems = [
     progress: 100,
     status: "ALGORITHM SELECTION AND PLANNING",
   },
+  {
+    title: "Influencer-Based Prediction Agent",
+    description:
+      "Choose a focused set of influencers and connect them to a lightweight agent that tests real-time tweet parsing and basic prediction output, validating the foundation of the system.",
+    progress: 10,
+    status: "IDEATION AND PLANNING",
+  },
 ];
 const IgnitionPhase = () => {
   return (
