@@ -57,7 +57,7 @@ const AnimatedHeadline = () => {
       </h1>
 
       {/* Small Headline - Visible on mobile only */}
-      <h2 className="block sm:hidden text-xl text-primary-text font-semibold text-center leading-[120%]">
+      <h2 className="block sm:hidden text-[34px] text-primary-text font-semibold text-center leading-[120%]">
         {smallHeadline.split(" ").map((word, i) => (
           <motion.span
             key={`small-word-${i}`}

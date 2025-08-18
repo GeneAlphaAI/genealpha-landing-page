@@ -12,7 +12,7 @@ const Hero = () => {
           variants={wordFadeIn(1.5, 1)}
           initial="hidden"
           animate="show"
-          className="text-secondary-text text-center text-md max-w-[55ch]"
+          className="text-secondary-text text-center text-[20px] sm:text-md max-w-[55ch]"
         >
           Model Zoo based prediction system using multiple baseline models to
           breed the strongest prediction model to date using Genetic Algorithms.
@@ -56,7 +56,7 @@ const Hero = () => {
         animate="show"
         src="/assets/hero/DAppSkew.webp"
         alt="Right Arrow - Docs"
-        className="absolute top-120 md:top-70 transform translate-x-[380px] sm:translate-x-[200px] w-full max-w-[2420px] min-w-[1200px] z-[1]"
+        className="absolute top-90 md:top-70 transform translate-x-[380px] sm:translate-x-[200px] w-full max-w-[2420px] min-w-[1200px] z-[1]"
       />
       <div className="absolute bottom-0 left-0 right-0 h-100 z-[3]  pointer-events-none bg-gradient-to-t from-primary to-transparent"></div>
       <div className="hidden sm:absolute top-0 right-0 h-full w-150 z-[3] pointer-events-none bg-gradient-to-l from-primary to-transparent"></div>
