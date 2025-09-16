@@ -58,7 +58,7 @@ const menus = [
         name: "Whitepaper",
         href: "https://whitepaper.genealpha.ai",
         description:
-          "Created for technical contributors who wish to join hands and scale with us.",
+          "Discover why and how we are building the GeneAlpha ecosystem.",
         icon: "/assets/menu/Whitepaper.svg",
       },
       {
