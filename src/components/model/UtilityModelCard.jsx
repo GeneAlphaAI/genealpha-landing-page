@@ -70,13 +70,13 @@ const UtilityModelCard = ({
 
       <p
         className={
-          "max-w-[18ch] font-jetbrains-mono font-light text-xs uppercase mt-4 text-white/40 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out"
+          "max-w-[18ch] font-jetbrains-mono font-light text-xs uppercase mt-4 text-white/40 opacity-100 sm:opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out"
         }
       >
         {hoverDescription}
       </p>
       {type === 2 && title && title.includes("CONTRACT") && (
-        <div className="opacity-0 group-hover:opacity-100 cursor-pointer transition-opacity duration-300 ease-in-out">
+        <div className="sm:opacity-0 group-hover:opacity-100 cursor-pointer transition-opacity duration-300 ease-in-out">
           <CopyButton />
         </div>
       )}
