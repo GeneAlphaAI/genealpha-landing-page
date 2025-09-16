@@ -1,6 +1,7 @@
 import React from "react";
 import { formatValue } from "../../utilities/helpers";
 import CopyButton from "../buttons/CopyButton";
+import showToast from "../../utilities/showToast";
 
 // Helper function to check if value is a token address
 const isTokenAddress = (value) => {
@@ -13,6 +14,7 @@ const isTokenAddress = (value) => {
 const copyToClipboard = async (text) => {
   try {
     await navigator.clipboard.writeText(text);
+    showToast("success", "Contract Address Copied");
     // You could add a toast notification here if needed
   } catch (err) {
     console.error("Failed to copy text: ", err);
@@ -76,7 +78,7 @@ const UtilityModelCard = ({
         {hoverDescription}
       </p>
       {type === 2 && title && title.includes("CONTRACT") && (
-        <div className="sm:opacity-0 group-hover:opacity-100 cursor-pointer transition-opacity duration-300 ease-in-out">
+        <div className="sm:opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
           <CopyButton />
         </div>
       )}
