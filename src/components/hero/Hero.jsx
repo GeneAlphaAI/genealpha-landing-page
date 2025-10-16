@@ -1,9 +1,9 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import PrimaryButton from "../buttons/PrimaryButton";
 import AnimatedHeadline from "./AnimatedHeadline";
 import { motion } from "framer-motion";
 import { fadeVariant, wordFadeIn } from "../../utilities/Motion";
-import AnimatedApp from "./AnimatedApp";
+const AnimatedApp = lazy(() => import("./AnimatedApp"));
 const Hero = () => {
   return (
     <div className="w-full flex flex-col relative h-[120dvh] xs:h-[130dvh] overflow-hidden items-center">
