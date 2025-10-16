@@ -3,6 +3,7 @@ import PrimaryButton from "../buttons/PrimaryButton";
 import AnimatedHeadline from "./AnimatedHeadline";
 import { motion } from "framer-motion";
 import { fadeVariant, wordFadeIn } from "../../utilities/Motion";
+import AnimatedApp from "./AnimatedApp";
 const Hero = () => {
   return (
     <div className="w-full flex flex-col relative h-[120dvh] xs:h-[130dvh] overflow-hidden items-center">
@@ -46,7 +47,7 @@ const Hero = () => {
           </button>
         </motion.div>
       </div>
-      <motion.img
+      {/* <motion.img
         variants={fadeVariant({
           direction: "down",
           delay: 2.5,
@@ -57,7 +58,8 @@ const Hero = () => {
         src="/assets/hero/DAppSkew.webp"
         alt="Right Arrow - Docs"
         className="absolute top-90 md:top-70 transform translate-x-[380px] sm:translate-x-[200px] w-full max-w-[2420px] min-w-[1200px] z-[1]"
-      />
+      /> */}
+      <AnimatedApp />
       <div className="absolute bottom-0 left-0 right-0 h-100 z-[3]  pointer-events-none bg-gradient-to-t from-primary to-transparent"></div>
       <div className="hidden sm:absolute top-0 right-0 h-full w-150 z-[3] pointer-events-none bg-gradient-to-l from-primary to-transparent"></div>
     </div>
